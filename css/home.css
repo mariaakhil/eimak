@@ -1,0 +1,39 @@
+body {
+    padding-top: 100px; /* Adjusted for banner + navbar */
+  }
+
+  .navbar-brand img {
+    height: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar.shrink .navbar-brand img {
+    height: 30px;
+  }
+
+  @media (max-width: 576px) {
+    .navbar-brand img {
+      height: 15px;
+    
+    
+    }
+  }
+
+
+  .carousel-indicators [data-bs-target] {
+    background-color: #ff009c;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .carousel-caption {
+    bottom: 20%;
+  }
+  .carousel-caption {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .carousel-item.active .carousel-caption {
+    opacity: 1;
+  }
