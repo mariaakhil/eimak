@@ -18,7 +18,39 @@ body {
     
     }
   }
-
+ 
+  .mt-with-banner {
+    margin-top: 32px; /* same as banner height */
+    transition: margin-top 0.3s ease;
+  }
+  
+  .mt-no-banner {
+    margin-top: 0 !important;
+  }
+  
+  .shrink {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    transition: all 0.3s ease;
+  }
+  
+  
+  #promoBanner {
+    transition: opacity 0.3s ease;
+  }
+  .promo-banner {
+    background-color: #ff009c;
+    font-size: 12px;
+    z-index: 1040;
+    width: 100%;
+    transition: top 0.3s ease;
+    height: 32px;
+  }
+  
+  .promo-hidden {
+    display: none;
+  }
+  
 
   .carousel-indicators [data-bs-target] {
     background-color: #ff009c;
@@ -37,3 +69,12 @@ body {
   .carousel-item.active .carousel-caption {
     opacity: 1;
   }
+  .btn-pink {
+    background-color: #ff009c;
+    color: #fff;
+    border: none;
+  }
+  .btn-pink:hover {
+    background-color: #e6008a; /* slightly darker on hover */
+  }
+  

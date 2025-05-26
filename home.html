@@ -21,12 +21,14 @@
 <body>
 
   <!-- Promo Banner -->
-  <div class="text-center text-white py-2 fixed-top" style="background-color: #ff009c; font-size: 12px; z-index: 1040;">
+  <div id="promoBanner" class="text-center text-white py-2 fixed-top" style="background-color: #ff009c; font-size: 12px; z-index: 1040;">
     <strong>SAVE EXTRA: ENJOY AN EXTRA 3% OFF ON YOUR PREPAID ORDERS.</strong>
   </div>
+  
 
   <!-- Navbar -->
-  <nav id="mainNavbar" class="navbar fixed-top bg-white shadow-sm" style="z-index: 1000; margin-top: 32px;">
+  <nav id="mainNavbar" class="navbar fixed-top bg-white shadow-sm mt-with-banner" style="z-index: 1000;">
+
     <div class="container-fluid position-relative px-3">
 
         <div class="position-absolute top-50 start-0 translate-middle-y ms-2">
@@ -94,11 +96,13 @@
     <div class="carousel-inner">
       <div class="carousel-item active position-relative">
         <img src="images/slide.jpeg" class="d-block w-100" alt="Slide 1">
-        <div id="caption1" class="carousel-caption text-start d-none d-md-block">
-          <h2 class="fw-bold">Holiday Picks</h2>
-          <p class="text-light">Must-have outfits for the season</p>
-          <a href="#" class="btn btn-outline-light ">Explore Now</a>
-        </div>
+        <div id="caption1" class="carousel-caption d-none d-md-block text-center">
+            <h2 class="fw-bold">Holiday Picks</h2>
+            <p class="text-light">Must-have outfits for the season</p>
+            <a href="#" class="btn text-white" style="background-color: #ff009c;">Explore Now</a>
+
+          </div>
+          
       </div>
       <div class="carousel-item position-relative">
         <img src="images/slide1.jpg" class="d-block w-100" alt="Slide 2">
@@ -117,7 +121,7 @@
         </div>
       </div>
     </div>
-    <div class="carousel-indicators justify-content-end pe-3">
+    <div class="carousel-indicators justify-content-end pe-1">
       <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
       <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
       <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
@@ -148,6 +152,37 @@
       </div>
     </div>
   </div>
+
+  <!-- Category Slider Section -->
+<section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">SHOP BY CATEGORY</h2>
+      <div class="owl-carousel category-carousel owl-theme">
+        <div class="item text-center">
+          <img src="images/cat.webp" class="img-fluid" alt="Dresses">
+          <h6 class="mt-2">DRESSES</h6>
+        </div>
+        <div class="item text-center">
+          <img src="images/cat1.webp" class="img-fluid" alt="Co-ords">
+          <h6 class="mt-2">CO-ORDS</h6>
+        </div>
+        <div class="item text-center">
+          <img src="images/category3.jpg" class="img-fluid" alt="Kurta Sets">
+          <h6 class="mt-2">KURTA SETS</h6>
+        </div>
+        <div class="item text-center">
+          <img src="images/category4.jpg" class="img-fluid" alt="Kurtas">
+          <h6 class="mt-2">KURTAS</h6>
+        </div>
+        <div class="item text-center">
+          <img src="images/category5.jpg" class="img-fluid" alt="Suit Sets">
+          <h6 class="mt-2">SUIT SETS</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- Bootstrap Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -155,16 +190,28 @@
 
   <!-- Shrink on Scroll Script -->
   <script>
-    const navbar = document.getElementById('mainNavbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
-        navbar.classList.add('shrink');
-      } else {
-        navbar.classList.remove('shrink');
+   const promoBanner = document.getElementById('promoBanner'); // make sure ID matches your HTML
+  const mainNavbar = document.getElementById('mainNavbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      // Hide banner and move navbar to top
+      if (promoBanner) promoBanner.classList.add('d-none');
+      if (mainNavbar) {
+        mainNavbar.classList.remove('mt-with-banner');
+        mainNavbar.classList.add('mt-no-banner');
+        mainNavbar.classList.add('shrink'); // optional: shrink navbar
       }
-    });
-
-
+    } else {
+      // Show banner and push navbar down
+      if (promoBanner) promoBanner.classList.remove('d-none');
+      if (mainNavbar) {
+        mainNavbar.classList.remove('mt-no-banner');
+        mainNavbar.classList.add('mt-with-banner');
+        mainNavbar.classList.remove('shrink');
+      }
+    }
+  });
     $(document).ready(function () {
     $(".mobile-carousel").owlCarousel({
       loop: true,
@@ -196,6 +243,24 @@
     // Add animation to the current caption
     caption.classList.add('animate__animated', animations[index]);
   });
+
+
+
+  $(".category-carousel").owlCarousel({
+      loop: true,
+      margin: 15,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      responsive: {
+        0: { items: 2 },
+        576: { items: 3 },
+        768: { items: 4 },
+        992: { items: 5 }
+      }
+    });
+
   </script>
 </body>
 </html>
