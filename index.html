@@ -27,10 +27,8 @@
   
 
   <!-- Navbar -->
-  <nav id="mainNavbar" class="navbar fixed-top bg-white shadow-sm mt-with-banner" style="z-index: 1000;">
-
-    <div class="container-fluid position-relative px-3">
-
+  <nav id="mainNavbar" class="navbar fixed-top w-100 transition-navbar">
+    <div class="container-fluid px-3 position-relative">
         <div class="position-absolute top-50 start-0 translate-middle-y ms-2">
             <button class="btn border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
               <i class="fas fa-bars fa-lg text-dark"></i>
@@ -51,18 +49,13 @@
       </div>
 
       <!-- Right: Mobile Dropdown (only visible on mobile) -->
-      <div class="position-absolute top-50 end-0 translate-middle-y pe-2 d-block d-sm-none">
-        <div class="dropdown">
-          <a class="dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown">
-           
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#"><i class="fas fa-search me-2"></i> Search</a></li>
-            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i> Profile</a></li>
-            <li><a class="dropdown-item" href="#"><i class="fas fa-shopping-bag me-2"></i> Cart</a></li>
-          </ul>
-        </div>
-      </div>
+      <!-- Right: Mobile Icons (Only visible on mobile) -->
+<div class="position-absolute top-50 end-0 translate-middle-y pe-2 d-flex d-sm-none align-items-center gap-3">
+  <a href="#"><i class="fas fa-search text-dark"></i></a>
+  <a href="#"><i class="fas fa-user text-dark"></i></a>
+  <a href="#"><i class="fas fa-shopping-bag text-dark"></i></a>
+</div>
+
 
     </div>
   </nav>
@@ -92,16 +85,16 @@
   </div>
   
 <!-- Main Desktop Slider -->
-<div id="mainCarousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel" data-bs-interval="4000">
+<div id="mainCarousel" class="carousel slide  d-md-block" data-bs-ride="carousel" data-bs-interval="4000">
     <div class="carousel-inner">
       <div class="carousel-item active position-relative">
         <img src="images/slide.jpeg" class="d-block w-100" alt="Slide 1">
-        <div id="caption1" class="carousel-caption d-none d-md-block text-center">
+        <div id="caption1" class="carousel-caption  d-md-block text-center">
             <h2 class="fw-bold">Holiday Picks</h2>
             <p class="text-light">Must-have outfits for the season</p>
-            <a href="#" class="btn text-white" style="background-color: #ff009c;">Explore Now</a>
+            <a href="#"  class="btn btn-outline-light">Explore Now</a>
 
-          </div>
+        </div>
           
       </div>
       <div class="carousel-item position-relative">
@@ -113,7 +106,7 @@
         </div>
       </div>
       <div class="carousel-item position-relative">
-        <img src="images/image.jpg" class="d-block w-100" alt="Slide 3">
+        <img src="images/slide4.jpg" class="d-block w-100" alt="Slide 3">
         <div  id="caption3" class="carousel-caption text-start d-none d-md-block">
           <h2 class="fw-bold">Up to 60% Off</h2>
           <p class="text-light">Limited time holiday sale</p>
@@ -121,11 +114,13 @@
         </div>
       </div>
     </div>
-    <div class="carousel-indicators justify-content-end pe-1">
-      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+    <div class="custom-indicators position-absolute end-0 bottom-0 mb-3 me-3 d-flex gap-2 z-3">
+      <div class="indicator-dot" data-bs-slide-to="0"></div>
+      <div class="indicator-dot" data-bs-slide-to="1"></div>
+      <div class="indicator-dot" data-bs-slide-to="2"></div>
     </div>
+    
+    
   </div>
   
   <!-- Responsive Mobile Slider using Owl Carousel -->
@@ -145,7 +140,7 @@
       </div>
     </div>
     <div class="item position-relative">
-      <img src="images/slide3.jpg" class="img-fluid w-100" alt="Mobile Slide 3">
+      <img src="images/slide4.jpg" class="img-fluid w-100" alt="Mobile Slide 3">
       <div class="position-absolute bottom-0 start-0 p-3 text-white">
         <h5>Mobile Title 3</h5>
         <a href="#" class="btn btn-outline-light btn-sm">Buy Now</a>
@@ -154,34 +149,48 @@
   </div>
 
   <!-- Category Slider Section -->
-<section class="py-5">
-    <div class="container">
+<section class="py-2">
+    <div class="container-fluid">
       <h2 class="text-center mb-4">SHOP BY CATEGORY</h2>
       <div class="owl-carousel category-carousel owl-theme">
-        <div class="item text-center">
+        <div class="item text-center p-0 m-0">
           <img src="images/cat.webp" class="img-fluid" alt="Dresses">
-          <h6 class="mt-2">DRESSES</h6>
+          <a href=""><h6 class="overlay-heading text-white fw-bold">DRESSES</h6></a>
         </div>
-        <div class="item text-center">
+        <div class="item text-center p-0 m-0">
           <img src="images/cat1.webp" class="img-fluid" alt="Co-ords">
-          <h6 class="mt-2">CO-ORDS</h6>
+          <a href=""><h6 class="overlay-heading text-white fw-bold">CO-ORDS</h6></a>
         </div>
-        <div class="item text-center">
-          <img src="images/category3.jpg" class="img-fluid" alt="Kurta Sets">
-          <h6 class="mt-2">KURTA SETS</h6>
+        <div class="item text-center p-0 m-0">
+          <img src="images/cat2.webp" class="img-fluid" alt="Kurta Sets">
+          <a href=""><h6 class="overlay-heading text-white fw-bold">KURTA SETS</h6></a>
         </div>
-        <div class="item text-center">
-          <img src="images/category4.jpg" class="img-fluid" alt="Kurtas">
-          <h6 class="mt-2">KURTAS</h6>
+        <div class="item text-center p-0 m-0">
+          <img src="images/cat1.webp" class="img-fluid" alt="Kurtas">
+          <a href=""><h6 class="overlay-heading text-white fw-bold">KURTAS</h6></a>
         </div>
-        <div class="item text-center">
-          <img src="images/category5.jpg" class="img-fluid" alt="Suit Sets">
-          <h6 class="mt-2">SUIT SETS</h6>
+        <div class="item text-center p-0 m-0">
+          <img src="images/cat2.webp" class="img-fluid" alt="Suit Sets">
+          <a href=""><h6 class="overlay-heading text-white fw-bold">SUIT SETS</h6></a>
         </div>
       </div>
     </div>
   </section>
-
+  <section class="position-relative work-section text-white d-flex align-items-center" style="background-image: url('images/banner.jpg'); background-size: cover; background-position: center; height: 100vh;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-12">
+          <div class="content-box">
+            <h2 class="fw-bold text-uppercase">Work</h2>
+            <h3 class="display-6 text-uppercase">Anywhere</h3>
+            <p class="mt-3 mb-4">Stay productive, stylish, and connected <br><strong>wherever life takes you.</strong></p>
+            <a href="#" class="btn btn-light px-4 py-2">Explore Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
   <!-- Bootstrap Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -212,6 +221,21 @@
       }
     }
   });
+
+
+  const navbar = document.getElementById('mainNavbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+
+
+
     $(document).ready(function () {
     $(".mobile-carousel").owlCarousel({
       loop: true,
@@ -247,19 +271,46 @@
 
 
   $(".category-carousel").owlCarousel({
-      loop: true,
-      margin: 15,
-      nav: false,
-      dots: false,
-      autoplay: true,
-      autoplayTimeout: 3000,
-      responsive: {
-        0: { items: 2 },
-        576: { items: 3 },
-        768: { items: 4 },
-        992: { items: 5 }
-      }
-    });
+  loop: true,
+  margin: 0,               // ✅ this adds spacing between items
+  nav: false,
+  dots: false,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  responsive: {
+    0: { items: 2 },
+    576: { items: 3 },
+    768: { items: 4 },
+    992: { items: 5 }
+  }
+});
+
+    const indicators = document.querySelectorAll('.indicator-dot');
+  const carousel = document.querySelector('#mainCarousel');
+
+  let currentIndex = 0;
+
+  const updateIndicators = (index) => {
+    indicators.forEach(dot => dot.classList.remove('active'));
+    indicators[index].classList.add('active');
+  };
+
+  // Initialize first dot
+  updateIndicators(0);
+
+  // Sync on slide change
+  carousel.addEventListener('slide.bs.carousel', function (e) {
+    updateIndicators(e.to);
+  });
+
+  // Auto advance every 4s (must match animation duration)
+  setInterval(() => {
+    const nextIndex = (currentIndex + 1) % indicators.length;
+    bootstrap.Carousel.getInstance(carousel).to(nextIndex);
+    currentIndex = nextIndex;
+  }, 4000);
+
+
 
   </script>
 </body>
