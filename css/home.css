@@ -2,7 +2,14 @@ body {
     padding-top: 100px; /* Adjusted for banner + navbar */
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
   }
+ 
+  
+  h1, h2, h3, h4, h5, h6, .fw-bold, .overlay-heading, .carousel-caption h2, .carousel-caption h3 {
+    font-family: 'Poppins', sans-serif;
+  }
+  
   .navbar-brand img {
     height: 40px;
     transition: all 0.3s ease;
@@ -23,7 +30,76 @@ body {
     background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
+  #mainNavbar {
+    background-color: transparent;
+    transition: all 0.4s ease;
+  }
 
+  #mainNavbar .nav-link,
+  #mainNavbar i {
+    color: white;
+    transition: color 0.4s ease;
+  }
+
+  .logo-black {
+    display: none;
+  }
+
+  .logo-white {
+    display: inline;
+  }
+
+  
+  #mainNavbar {
+    background-color: transparent;
+    transition: all 0.4s ease;
+  }
+
+  .nav-icon i {
+    color: white;
+    transition: color 0.4s ease;
+  }
+
+  .logo-black {
+    display: none;
+  }
+
+  .logo-white {
+    display: inline;
+  }
+
+  /* SCROLL STATE */
+  #mainNavbar.scrolled {
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  #mainNavbar.scrolled .nav-icon i {
+    color: black;
+  }
+
+  #mainNavbar.scrolled .logo-white {
+    display: none;
+  }
+
+  #mainNavbar.scrolled .logo-black {
+    display: inline;
+  }
+
+/* Default - White icons */
+.nav-icon i {
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  /* On Scroll - Black icons */
+  #mainNavbar.scrolled .nav-icon i {
+    color: black;
+  }
+  /* Default (transparent navbar) */
+
+ 
+  
   
   @media (max-width: 576px) {
     .navbar-brand img {
@@ -127,7 +203,7 @@ body {
 
   .category-carousel .item img {
      /* optional for smooth corners */
-    padding: 0;       /* optional for inner image spacing */
+    padding: 1px;       /* optional for inner image spacing */
   }
  
   .category-carousel .item {
@@ -153,24 +229,73 @@ body {
   } 
 
 
-  .work-section {
-    min-height: 100vh;
-    color: white;
-    position: relative;
+
+
+
+   /* Mobile-specific background image */
+   .work-image {
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
   }
   
-  .work-section .content-box {
-    padding-top: 100px;
+  .work-text-overlay {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 500px;
+    z-index: 2;
   }
   
-  @media (max-width: 767px) {
-    .work-section {
-      background-position: 45% center; /* Shift model into view */
-      padding: 60px 15px;
-    }
-  
-    .work-section .content-box {
+  @media (max-width: 768px) {
+    .work-text-overlay {
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
+      padding: 0 20px;
     }
+  
+    .work-image {
+      height: 50vh;
+    }
+    .btn {
+        display: inline-block;
+      }
+  }
+  
+
+  .product-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 70%);
+  }
+
+  .custom-next-btn {
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  @media (max-width: 768px) {
+    .product-overlay h6 {
+      font-size: 14px;
+    }
+
+    .product-overlay .btn {
+      font-size: 12px;
+      padding: 4px 10px;
+    }
+  }
+  .btn-pink {
+    background-color: #ff009c;
+    color: white;
+    border: none;
+  }
+  
+  .btn-pink:hover {
+    background-color: #e60087;
+    color: white;
   }
   
