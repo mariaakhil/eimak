@@ -266,36 +266,162 @@ body {
   }
   
 
-  .product-overlay {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 70%);
-  }
+ 
 
-  .custom-next-btn {
-    z-index: 5;
-    width: 40px;
-    height: 40px;
+  .product-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .wishlist-btn,
+  .plus-btn {
+    background-color: rgba(255, 255, 255, 0.95);
     border: none;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    border-radius: 50%;
+    padding: 6px 9px;
+    font-size: 14px;
+    color: #ff009c;
+    z-index: 10;
   }
-
-  @media (max-width: 768px) {
-    .product-overlay h6 {
-      font-size: 14px;
-    }
-
-    .product-overlay .btn {
-      font-size: 12px;
-      padding: 4px 10px;
-    }
-  }
-  .btn-pink {
+  
+  .wishlist-btn:hover,
+  .plus-btn:hover {
     background-color: #ff009c;
     color: white;
-    border: none;
   }
   
-  .btn-pink:hover {
-    background-color: #e60087;
+  
+  
+  
+  .offer-badge {
+    background-color: #ff0000;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    z-index: 9;
+  }
+
+  
+  .product-card:hover .plus-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .plus-btn-inside,
+  .wishlist-btn {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 50%;
+    padding: 6px 9px;
+    font-size: 14px;
+    color: #ff009c;
+    z-index: 10;
+  }
+  
+  
+  
+  .wishlist-btn:hover,
+  .plus-btn:hover {
+    background-color: #ff009c;
     color: white;
   }
   
+  .offer-badge {
+    background-color: #ff009c;
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    font-weight: bold;
+    border-radius: 4px;
+    z-index: 5;
+  }
+  
+  .custom-carousel-btn {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .product-card:hover .custom-carousel-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .custom-carousel-btn i {
+    font-size: 14px;
+    color: #000;
+  }
+
+ .product-card .hover-btn,
+.product-card .plus-btn {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .hover-btn,
+.product-card:hover .plus-btn {
+  opacity: 1;
+}
+
+.hover-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50%;
+  color: #000;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+.product-card .hover-button,
+.product-card .plus-btn-inside {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.product-card:hover .hover-button,
+.product-card:hover .plus-btn-inside {
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+/* ✅ Plus Button: inside image bottom-left */
+.plus-btn-inside {
+  bottom: 10px;
+  left: 10px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 6px 10px;
+  font-size: 16px;
+  color: #ff009c;
+  z-index: 10;
+}
+
+
