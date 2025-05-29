@@ -61,87 +61,13 @@
   }
 
 
-    .work-text-overlay {
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
-    width: 100%;
-    max-width: 500px;
-    z-index: 2;
-  }
-  
-  @media (max-width: 768px) {
-    .work-text-overlay {
-      top: 90%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      padding: 0 20px;
-    }
-  
-    .work-image {
-      height: 50vh;
-    }
-    .btn {
-        display: inline-block;
-      }
-  }
   
   
 
-  .essentials-banner {
-  background: url('images/kurtas.webp') no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  position: relative;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-/* Responsive - show full image on mobile */
-@media (max-width: 768px) {
-  .essentials-banner {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top center;
-    height: auto;
-    padding: 60px 20px;
-  }
-}
+  
 
 
 
-.coord-banner {
-    background: url('images/coord.webp') no-repeat center center;
-    background-size: cover;
-    height: 80vh;
-    position: relative;
-    color: #fff;
-    text-align: center;
-    overflow: hidden;
-  }
-  @media (max-width: 768px) {
-  .coord-banner {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top center;
-    height: auto;
-    padding: 5px 6px;
-  }
-}
-
-.dress-banner {
-    background: url('images/dres.jpg') no-repeat center center;
-    background-size: cover;
-    height: 80vh;
-    position: relative;
-    color: #fff;
-    text-align: center;
-    overflow: hidden;
-  }
 
 
   .contact-banner {
@@ -387,12 +313,13 @@
         
   <div class="position-relative">
     <img src="images/banner.jpg" alt="Work" class="img-fluid work-image">
-    <div class="work-text-overlay">
+    <div class="work-text-overlay text-white text-center">
       <h2>Your Fashion</h2>
       <p>Your Choice</p>
       <a href="#" class="btn btn-light">Get Started</a>
     </div>
   </div>
+  
   
 <section class="py-5">
     <div class="container-fluid">
@@ -617,13 +544,15 @@
 
 
 
-<section class="essentials-banner">
-  <div class="container">
-    <h6 class="text-uppercase fw-bold mb-2">All About </h6>
+<section class="essentials-banner position-relative">
+  <img src="images/kurtas.webp" alt="Kurtas" class="img-fluid essentials-image">
+  <div class="essentials-overlay text-center text-white">
+    <h6 class="text-uppercase fw-bold mb-2">All About</h6>
     <h2 class="display-5 fw-bold mb-4">KURTAS Set</h2>
     <a href="#" class="btn btn-light px-4 py-2 rounded-pill" style="border-color: #fff;">Explore Now</a>
   </div>
 </section>
+
 <section class="py-5">
   <div class="container">
     <div class="row g-4">
@@ -840,13 +769,15 @@
   </div>
 </div>
 <!-- Co-ord Set Banner Section -->
-<section class="coord-banner position-relative text-center text-white d-flex align-items-center justify-content-center">
-  <div class="container">
+<section class="coord-banner position-relative text-white">
+  <img src="images/coord.webp" alt="Coord Sets" class="img-fluid coord-image">
+  <div class="coord-overlay text-center text-white">
     <h2 class="fw-bold mb-3">Co-ord Sets Collection</h2>
     <p class="mb-4">Explore our trendy co-ord sets made for comfort and style</p>
     <a href="#" class="btn btn-light px-4 py-2 fw-bold rounded-pill">Shop Now</a>
   </div>
 </section>
+
 <section class="py-5">
   <div class="container">
     <div class="row g-4">
@@ -1057,8 +988,9 @@
   </div>
 </div>
 <!-- Co-ord Set Banner Section -->
-<section class="dress-banner position-relative text-center text-white d-flex align-items-center justify-content-center">
-  <div class="container">
+<section class="dress-banner position-relative text-white">
+  <img src="images/dres.jpg" alt="Dresses Collection" class="img-fluid dress-image">
+  <div class="dress-overlay text-center text-white">
     <h2 class="fw-bold mb-3">Dresses Collection</h2>
     <p class="mb-4">Explore our trendy co-ord sets made for comfort and style</p>
     <a href="#" class="btn btn-light px-4 py-2 fw-bold rounded-pill">Shop Now</a>

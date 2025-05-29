@@ -232,73 +232,7 @@ body {
 
 
 
-   /* Default styles for desktop and larger screens */
-.work-image {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  object-position: center;
-}
-
-.work-text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-  width: 100%;
-  max-width: 500px;
-  z-index: 2;
-  color: #fff;
-}
-
-/* Responsive styles for mobile */
-@media (max-width: 768px) {
-  .work-image {
-    height: 50vh;
-  }
-
-  .work-text-overlay {
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 0 20px;
-  }
-
-  @media (max-width: 768px) {
-    .work-image {
-      height: 50vh;
-    }
-  
-    .work-text-overlay {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      padding: 0 20px;
-      width: 100%;
-    }
-  
-    .work-text-overlay h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-  
-    .work-text-overlay p {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-  
-    .work-text-overlay .btn {
-      display: inline-block;
-      padding: 8px 20px;
-      font-size: 0.95rem;
-      margin-bottom: 0;
-    }
-  }
-  
-}
-
+   
 
   .product-card {
     transition: transform 0.3s ease;
@@ -466,63 +400,72 @@ body {
 
 
 
+
 .essentials-banner {
-    background: url('images/banner.jpg') no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 20px;
-    overflow: hidden;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.essentials-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Text Overlay */
+.essentials-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  color: #fff;
+}
+
+/* Button Hover */
+.essentials-overlay .btn:hover {
+  background-color: #ff009c;
+  color: #fff;
+  border-color: #ff009c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .essentials-banner {
+    height: auto;
   }
-  
-  .essentials-banner::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: 1;
+
+  .essentials-image {
+    height: 60vh;
   }
-  
-  .essentials-banner .container {
-    position: relative;
-    z-index: 2;
+
+  .essentials-overlay h2 {
+    font-size: 1.8rem;
   }
-  
-  .essentials-banner h2,
-  .essentials-banner h6 {
-    color: #fff;
+
+  .essentials-overlay h6 {
+    font-size: 1rem;
   }
-  
-  .essentials-banner .btn {
-    background-color: #fff;
-    color: #000;
-    font-weight: bold;
-    padding: 10px 25px;
-    border-radius: 0;
-    transition: 0.3s;
+
+  .essentials-overlay .btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
   }
-  
-  .essentials-banner .btn:hover {
-    background-color: #ff009c;
-    color: #fff;
-  }
-  
-  /* Responsive Mobile View */
-  @media (max-width: 768px) {
-    .essentials-banner {
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: top center;
-      height: auto;
-      padding: 60px 20px;
-    }
-  }
-  
+}
+
+
+
+
+
+
+
+
+
   .kurtas-card img {
     height: 300px;
     object-fit: cover;
@@ -564,153 +507,125 @@ body {
   
   
   .coord-banner {
-    background: url('images/coord-banner.jpg') no-repeat center center;
-    background-size: cover;
-    height: 80vh;
     position: relative;
-    color: #fff;
-    text-align: center;
+    height: 100vh;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 20px;
   }
   
-  .coord-banner::before {
-    content: '';
+  .coord-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  /* Overlay text box */
+  .coord-overlay {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Add a transparent overlay */
-    z-index: 1;
-  }
-  
-  .coord-banner .container {
-    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 2;
-  }
-  
-  .coord-banner h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .coord-banner p {
-    font-size: 1.1rem;
+    width: 100%;
     max-width: 600px;
-    margin: 0 auto 1.5rem;
+    padding: 20px;
+    color: #fff;
   }
   
-  .coord-banner .btn {
-    background-color: #fff;
-    color: #000;
-    border-radius: 0;
-    padding: 10px 30px;
-    transition: all 0.3s ease;
-  }
-  
-  .coord-banner .btn:hover {
+  /* Button hover effect */
+  .coord-overlay .btn:hover {
     background-color: #ff009c;
     color: #fff;
+    border-color: #ff009c;
   }
   
-  /* 📱 Responsive Styles for Mobile */
+  /* Responsive mobile adjustments */
   @media (max-width: 768px) {
     .coord-banner {
-      background-size: contain;
-      background-position: top center;
       height: auto;
-      padding: 60px 15px;
     }
   
-    .coord-banner h2 {
+    .coord-image {
+      height: 60vh;
+    }
+  
+    .coord-overlay h2 {
+      font-size: 1.8rem;
+    }
+  
+    .coord-overlay p {
       font-size: 1rem;
-      margin-top: 10px;
     }
   
-    .coord-banner p {
-      font-size: 1rem;
-    }
-  
-    .coord-banner .btn {
-      font-size: 0.95rem;
-      padding: 8px 24px;
+    .coord-overlay .btn {
+      font-size: 0.9rem;
+      padding: 8px 20px;
     }
   }
   
-
 
  
 
   .dress-banner {
-    background: url('images/coord-banner.jpg') no-repeat center center;
-    background-size: cover;
-    height: 80vh;
     position: relative;
-    color: #fff;
-    text-align: center;
+    height: 100vh;
     overflow: hidden;
   }
   
-  .dress-banner::before {
-    content: '';
+  .dress-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .dress-overlay {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-      z-index: 1;
-  }
-  
-  .dress-banner .container {
-    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 2;
-  }
-  
-  .dress-banner h2 {
-    font-size: 2.5rem;
-  }
-  
-  .dress-banner p {
-    font-size: 1.1rem;
+    width: 100%;
     max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .dress-banner .btn {
-    background-color: #fff;
-    color: #000;
-    border-radius: 0;
-    transition: all 0.3s ease;
-  }
-  
-  .dress-banner .btn:hover {
-    background-color: #ff009c;
+    padding: 20px;
     color: #fff;
   }
+  
+  .dress-overlay .btn:hover {
+    background-color: #ff009c;
+    color: #fff;
+    border-color: #ff009c;
+  }
+  
+  /* Responsive mobile view */
   @media (max-width: 768px) {
-    
-  
-    .dress-banner h2 {
-      font-size: 1rem;
-    }
-  
-    .dress-banner p {
-      font-size: 1rem;
-    }
-  }
-    
-   /* Responsive Mobile View */
-   @media (max-width: 768px) {
     .dress-banner {
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: top center;
       height: auto;
-      padding: 60px 20px;
+    }
+  
+    .dress-image {
+      height: 60vh;
+    }
+  
+    .dress-overlay h2 {
+      font-size: 1.8rem;
+    }
+  
+    .dress-overlay p {
+      font-size: 1rem;
+    }
+  
+    .dress-overlay .btn {
+      font-size: 0.9rem;
+      padding: 8px 20px;
     }
   }
+  
 
 
+
+
+  
 
 
   .feature-icon {
@@ -734,5 +649,86 @@ body {
   .footer a:hover {
     color: #ff009c !important;
     text-decoration: underline;
+  }
+  
+
+
+
+
+  .work-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .work-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Headings and button */
+  .work-text-overlay h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .work-text-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .work-text-overlay .btn {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 25px;
+    font-weight: 600;
+    border-radius: 0;
+    transition: 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .work-text-overlay .btn:hover {
+    background-color: #ff009c;
+    color: #fff;
+  }
+  
+  /* ✅ Mobile Fix */
+  @media (max-width: 768px) {
+    .work-image {
+      height: 60vh;
+    }
+  
+    .work-text-overlay {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px;
+    }
+  
+    .work-text-overlay h2 {
+      font-size: 1.4rem;
+    }
+  
+    .work-text-overlay p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .work-text-overlay .btn {
+      font-size: 0.9rem;
+      padding: 8px 20px;
+      width: auto;
+      display: inline-block;
+    }
   }
   
