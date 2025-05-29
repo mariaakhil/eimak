@@ -7,12 +7,14 @@
     <!-- Bootstrap 5 CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+
 <!-- Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="css/home.css" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -87,6 +89,119 @@
   
   
 
+  .essentials-banner {
+  background: url('images/kurtas.webp') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Responsive - show full image on mobile */
+@media (max-width: 768px) {
+  .essentials-banner {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: auto;
+    padding: 60px 20px;
+  }
+}
+
+
+
+.coord-banner {
+    background: url('images/coord.webp') no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+  }
+  @media (max-width: 768px) {
+  .coord-banner {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: auto;
+    padding: 5px 6px;
+  }
+}
+
+.dress-banner {
+    background: url('images/dres.jpg') no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+  }
+
+
+  .contact-banner {
+  background-image: url('images/contact.webp'); /* Replace with actual path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+  padding: 80px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black overlay */
+  z-index: 1;
+}
+
+.contact-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-banner h2 {
+  font-size: 2.2rem;
+}
+
+.contact-banner p {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-banner {
+    padding: 60px 15px;
+    min-height: 50vh;
+  }
+
+  .contact-banner h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-banner p {
+    font-size: 1rem;
+  }
+
+  .contact-banner .btn {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+}
+
+ 
+
 </style>
 <body>
 
@@ -140,7 +255,7 @@
     <form>
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search...">
-        <button class="btn btn-primary" type="submit">Go</button>
+        <button class="btn btn-primary rounded-pill" type="submit">Go</button>
       </div>
     </form>
   </div>
@@ -184,7 +299,7 @@
         <div id="caption1" class="carousel-caption  d-md-block text-center">
             <h2 class="fw-bold">Holiday Picks</h2>
             <p class="text-light">Must-have outfits for the season</p>
-            <a href="#"  class="btn btn-outline-light">Explore Now</a>
+            <a href="#"  class="btn btn-outline-light rounded-pill">Explore Now</a>
 
         </div>
           
@@ -194,7 +309,7 @@
         <div  id="caption2" class="carousel-caption text-start d-none d-md-block">
           <h2 class="fw-bold">New Arrivals</h2>
           <p class="text-light">Fresh styles just dropped</p>
-          <a href="#" class="btn btn-outline-light">Shop Now</a>
+          <a href="#" class="btn btn-outline-light rounded-pill">Shop Now</a>
         </div>
       </div>
       <div class="carousel-item position-relative">
@@ -202,7 +317,7 @@
         <div  id="caption3" class="carousel-caption text-start d-none d-md-block">
           <h2 class="fw-bold">Up to 60% Off</h2>
           <p class="text-light">Limited time holiday sale</p>
-          <a href="#" class="btn btn-outline-light">Grab Deal</a>
+          <a href="#" class="btn btn-outline-light rounded-pill">Grab Deal</a>
         </div>
       </div>
     </div>
@@ -270,40 +385,35 @@
   </section>
   
         
-  <section class="work-anywhere-section position-relative text-white" style="margin-top: 40px;">
-    <div class="container-fluid p-0">
-      <div class="row g-0 flex-column-reverse flex-md-row">
-        <div class="col-md-12">
-          <div class="position-relative">
-            <img src="images/banner.jpg" alt="Work Anywhere" class="img-fluid w-100 work-image">
-  
-            <!-- Text + Button Overlay -->
-            <div class="work-text-overlay position-absolute text-box text-center text-md-start">
-              <h2 class="fw-bold text-uppercase">Work</h2>
-              <h3 class="text-uppercase">Anywhere</h3>
-              <p class="mb-4">Stay productive, stylish, and connected<br><strong style="color: #ff009c;">wherever life takes you.</strong></p>
-              <a href="#" class="btn btn-light px-4 py-2 mt-2">Explore Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="position-relative">
+    <img src="images/banner.jpg" alt="Work" class="img-fluid work-image">
+    <div class="work-text-overlay">
+      <h2>Your Fashion</h2>
+      <p>Your Choice</p>
+      <a href="#" class="btn btn-light">Get Started</a>
     </div>
-  </section>
-  <section class="py-5">
+  </div>
+  
+<section class="py-5">
     <div class="container-fluid">
       <h2 class="text-center mb-4">Trending Deals</h2>
       <div class="row g-4">
-  
-        <!-- Card 1 -->
+     <!-- Card 1 -->
         <div class="col-md-3">
           <div class="card product-card position-relative overflow-hidden border-0">
-            <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
+      
+           <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
            
             <div id="carouselCard1" class="carousel slide">
               <div class="carousel-inner">
-                <div class="carousel-item active"><img src="images/product.webp" class="d-block w-100" alt=""></div>
-                <div class="carousel-item"><img src="images/product1.webp" class="d-block w-100" alt=""></div>
+                <div class="carousel-item active">
+                  <img src="images/product.webp" class="d-block w-100 product-img" alt="img-fluid">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/product1.webp" class="d-block w-100 product-img" alt="img-fluid">
+                </div>
               </div>
+              
               <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard1" data-bs-slide="prev">
                 <i class="fas fa-chevron-left"></i>
               </button>
@@ -330,8 +440,12 @@
             
             <div id="carouselCard2" class="carousel slide">
               <div class="carousel-inner">
-                <div class="carousel-item active"><img src="images/product2.webp" class="d-block w-100" alt=""></div>
-                <div class="carousel-item"><img src="images/product.webp" class="d-block w-100" alt=""></div>
+                <div class="carousel-item active">
+                  <img src="images/dresspdt.webp" class="d-block w-100 product-img" alt="img-fluid">
+                </div>
+                <div class="carousel-item">
+                <img src="images/product.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
               </div>
               <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard2" data-bs-slide="prev">
                 <i class="fas fa-chevron-left"></i>
@@ -359,8 +473,12 @@
            
             <div id="carouselCard3" class="carousel slide">
               <div class="carousel-inner">
-                <div class="carousel-item active"><img src="images/product1.webp" class="d-block w-100" alt=""></div>
-                <div class="carousel-item"><img src="images/product.webp" class="d-block w-100" alt=""></div>
+                <div class="carousel-item active">
+                  <img src="images/coordpdt1.jpg" class="d-block w-100 product-img" alt="img-fluid">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/product.webp" class="d-block w-100 product-img" alt="img-fluid">
+                </div>
               </div>
               <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard3" data-bs-slide="prev">
                 <i class="fas fa-chevron-left"></i>
@@ -388,8 +506,12 @@
            
             <div id="carouselCard4" class="carousel slide">
               <div class="carousel-inner">
-                <div class="carousel-item active"><img src="images/product2.webp" class="d-block w-100" alt=""></div>
-                <div class="carousel-item"><img src="images/product1.webp" class="d-block w-100" alt=""></div>
+                <div class="carousel-item active">
+                  <img src="images/product3.jpeg" class="d-block w-100 product-img" alt="img-fluid">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/product1.webp" class="d-block w-100 product-img" alt="img-fluid">
+                </div>
               </div>
               <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard4" data-bs-slide="prev">
                 <i class="fas fa-chevron-left"></i>
@@ -431,10 +553,10 @@
             <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="images/product.webp" class="d-block w-100" alt="...">
+                  <img src="images/product.webp" class="d-block w-100" alt="Image 1">
                 </div>
                 <div class="carousel-item">
-                  <img src="images/product1.webp" class="d-block w-100" alt="...">
+                  <img src="images/product1.webp" class="d-block w-100"  alt="Image 1">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
@@ -444,11 +566,11 @@
                 <span class="carousel-control-next-icon"></span>
               </button>
             </div>
-          =
+        
           </div>
 
           <!-- Right: Product Info -->
-          <div class="col-md-6">
+          <div class="col-md-6" style="margin-top: 80px;">
             <h5 class="mb-2 fw-bold">MAUVE DOBBY CHIFFON SELF DESIGN A-LINE KURTA</h5>
             <h6 class="text-danger">₹999.00 <del class="text-muted fs-6 ms-2">₹2,497.50</del></h6>
 
@@ -469,12 +591,683 @@
             <button class="btn btn-outline-dark mb-3"><i class="far fa-heart me-1"></i> Add to Wishlist</button>
 
             <!-- Add to Cart -->
-            <div>
-              <button class="btn btn-dark w-100 py-2 fw-bold" style="background-color: #ff009c; color: #fff;">ADD TO CART</button>
+           <!-- Add to Cart -->
+<div class="mb-4">
+  <button class="btn w-100 py-2 fw-bold" style="background-color: #ff009c; color: #fff;">ADD TO CART</button>
+</div>
+
+<!-- Fill extra space with a returns/delivery note -->
+<div class="mt-4">
+  <h6 class="fw-semibold">Delivery & Return</h6>
+  <p class="text-muted small mb-2">Free shipping on orders over ₹999</p>
+  <p class="text-muted small mb-0">Easy 7-day return policy</p>
+</div>
+
+<!-- OR optionally add additional info -->
+<div class="mt-4">
+  <h6 class="fw-semibold">Fabric Care</h6>
+  <p class="text-muted small mb-0">Hand wash separately in cold water. Use mild detergent.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<section class="essentials-banner">
+  <div class="container">
+    <h6 class="text-uppercase fw-bold mb-2">All About </h6>
+    <h2 class="display-5 fw-bold mb-4">KURTAS Set</h2>
+    <a href="#" class="btn btn-light px-4 py-2 rounded-pill" style="border-color: #fff;">Explore Now</a>
+  </div>
+</section>
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-md-3">
+        <div class="card product-card position-relative overflow-hidden border-0">
+          <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
+         
+          <div id="carouselCard" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/product.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="images/product1.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+            </div>
+            
+            <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard" data-bs-slide="prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="custom-carousel-btn carousel-control-next" type="button" data-bs-target="#carouselCard" data-bs-slide="next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+              <!-- ✅ Plus Button inside image bottom-left -->
+            <button class="plus-btn-inside position-absolute" data-bs-toggle="modal" data-bs-target="#kurtasModal"><i class="fas fa-plus"></i></button>
+
+            <span class="offer-badge position-absolute bottom-0 end-0 m-2">80% OFF</span>
+          </div>
+
+          <div class="card-body text-center">
+            <h6 class="mb-1">Straight Kurta Set</h6>
+            <p class="mb-0"><strong>₹849</strong> <del class="text-muted">₹1,999</del></p>
+          </div>
+        </div>
+      </div>
+  <!-- Card 2 -->
+      <div class="col-md-3">
+        <div class="card product-card position-relative overflow-hidden border-0">
+          <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
+
+          <div id="carouselCard5" class="carousel slide" data-bs-ride="Carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/product2.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="images/product.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+            </div>
+            <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard5" data-bs-slide="prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="custom-carousel-btn carousel-control-next" type="button" data-bs-target="#carouselCard5" data-bs-slide="next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <button class="plus-btn-inside position-absolute" data-bs-toggle="modal" data-bs-target="#kurtasModal"><i class="fas fa-plus"></i></button>
+            <span class="offer-badge position-absolute bottom-0 end-0 m-2">70% OFF</span>
+          </div>
+
+          <div class="card-body text-center">
+            <h6 class="mb-1">Cotton Kurti</h6>
+            <p class="mb-0"><strong>₹599</strong> <del class="text-muted">₹1,499</del></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-3">
+        <div class="card product-card position-relative overflow-hidden border-0">
+          <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
+
+          <div id="carouselCard6" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/product3.jpeg" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="images/product.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+            </div>
+            <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard6" data-bs-slide="prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="custom-carousel-btn carousel-control-next" type="button" data-bs-target="#carouselCard6" data-bs-slide="next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <button class="plus-btn-inside position-absolute" data-bs-toggle="modal" data-bs-target="#kurtasModal"><i class="fas fa-plus"></i></button>
+            <span class="offer-badge position-absolute bottom-0 end-0 m-2">60% OFF</span>
+          </div>
+
+          <div class="card-body text-center">
+            <h6 class="mb-1">Printed Tunic</h6>
+            <p class="mb-0"><strong>₹749</strong> <del class="text-muted">₹1,899</del></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-3">
+        <div class="card product-card position-relative overflow-hidden border-0">
+          <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
+
+          <div id="carouselCard7" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/product2.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="images/product1.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+            </div>
+            <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard7" data-bs-slide="prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="custom-carousel-btn carousel-control-next" type="button" data-bs-target="#carouselCard7" data-bs-slide="next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <button class="plus-btn-inside position-absolute" data-bs-toggle="modal" data-bs-target="#kurtasModal"><i class="fas fa-plus"></i></button>
+            <span class="offer-badge position-absolute bottom-0 end-0 m-2">90% OFF</span>
+          </div>
+
+          <div class="card-body text-center">
+            <h6 class="mb-1">Ethnic Wear Set</h6>
+            <p class="mb-0"><strong>₹999</strong> <del class="text-muted">₹2,999</del></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Kurtas Modal Structure -->
+<div class="modal fade" id="kurtasModal" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content p-4">
+      
+      <!-- Close Button -->
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      
+      <div class="modal-body">
+        <div class="row">
+
+          <!-- Left: Image Carousel -->
+          <div class="col-md-6">
+            <div id="kurtasCarouselModal" class="carousel slide" data-bs-ride="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/product.webp" class="d-block w-100" alt="Kurta Image 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/product1.webp" class="d-block w-100" alt="Kurta Image 2">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#kurtasCarouselModal" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#kurtasCarouselModal" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Product Info -->
+          <div class="col-md-6" style="margin-top: 80px;">
+            <h5 class="mb-2 fw-bold">Elegant Kurta - New Arrival</h5>
+            <h6 class="text-danger">₹799.00 <del class="text-muted fs-6 ms-2">₹1,999.00</del></h6>
+            
+            <hr>
+
+            <p class="mb-1 fw-semibold">Color: Pastel Green</p>
+            <p class="mb-1 fw-semibold">Available Sizes:</p>
+            <div class="d-flex gap-2 mb-3">
+              <button class="btn btn-outline-dark btn-sm active">M</button>
+              <button class="btn btn-outline-dark btn-sm">L</button>
+              <button class="btn btn-outline-dark btn-sm">XL</button>
+              <button class="btn btn-outline-dark btn-sm">XXL</button>
             </div>
 
-          
+            <p class="mb-1 fw-semibold">Fabric: Cotton Blend</p>
+            <p class="mb-3">A lightweight kurta designed for comfort and elegance, perfect for daily and festive wear.</p>
 
+            <!-- Wishlist -->
+            <button class="btn btn-outline-dark mb-3"><i class="far fa-heart me-1"></i> Add to Wishlist</button>
+
+            <!-- Add to Cart -->
+            <button class="btn w-100 fw-bold" style="background-color: #ff009c; color: #fff;">ADD TO CART</button>
+
+            <!-- Extra spacing -->
+         <!-- Fill extra space with a returns/delivery note -->
+         <div class="mt-4">
+          <h6 class="fw-semibold">Delivery & Return</h6>
+          <p class="text-muted small mb-2">Free shipping on orders over ₹999</p>
+          <p class="text-muted small mb-0">Easy 7-day return policy</p>
+        </div>
+        
+        <!-- OR optionally add additional info -->
+        <div class="mt-4">
+          <h6 class="fw-semibold">Fabric Care</h6>
+          <p class="text-muted small mb-0">Hand wash separately in cold water. Use mild detergent.</p>
+        </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Co-ord Set Banner Section -->
+<section class="coord-banner position-relative text-center text-white d-flex align-items-center justify-content-center">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Co-ord Sets Collection</h2>
+    <p class="mb-4">Explore our trendy co-ord sets made for comfort and style</p>
+    <a href="#" class="btn btn-light px-4 py-2 fw-bold rounded-pill">Shop Now</a>
+  </div>
+</section>
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+   <!-- Card 1 -->
+      <div class="col-md-3">
+        <div class="card product-card position-relative overflow-hidden border-0">
+    
+         <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
+         
+          <div id="carouselCard8" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/coordprdt.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="images/coordpdt.jpeg" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+            </div>
+            
+            <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard8" data-bs-slide="prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="custom-carousel-btn carousel-control-next" type="button" data-bs-target="#carouselCard8" data-bs-slide="next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+              <!-- ✅ Plus Button inside image bottom-left -->
+      <button class="plus-btn-inside position-absolute" data-bs-toggle="modal" data-bs-target="#coordModal"><i class="fas fa-plus"></i></button>
+
+            <span class="offer-badge position-absolute bottom-0 end-0 m-2">80% OFF</span>
+          </div>
+
+          <div class="card-body text-center">
+            <h6 class="mb-1">Summer co-ordset</h6>
+            <p class="mb-0"><strong>₹849</strong> <del class="text-muted">₹999</del></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-3">
+        <div class="card product-card position-relative overflow-hidden border-0">
+          <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
+          
+          <div id="carouselCard9" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/coordpdt.jpeg" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+              <div class="carousel-item">
+              <img src="images/product.webp" class="d-block w-100 product-img" alt="img-fluid">
+            </div>
+            </div>
+            <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard9" data-bs-slide="prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="custom-carousel-btn carousel-control-next" type="button" data-bs-target="#carouselCard9" data-bs-slide="next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+             <!-- ✅ Plus Button inside image bottom-left -->
+      <button class="plus-btn-inside position-absolute" data-bs-toggle="modal" data-bs-target="#coordModal"><i class="fas fa-plus"></i></button>
+
+            <span class="offer-badge position-absolute bottom-0 end-0 m-2">70% OFF</span>
+          </div>
+
+          <div class="card-body text-center">
+            <h6 class="mb-1">Cotton Kurti</h6>
+            <p class="mb-0"><strong>₹599</strong> <del class="text-muted">₹1,499</del></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-3">
+        <div class="card product-card position-relative overflow-hidden border-0">
+          <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
+         
+          <div id="carouselCard10" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/coordprdt.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="images/product.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+            </div>
+            <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard10" data-bs-slide="prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="custom-carousel-btn carousel-control-next" type="button" data-bs-target="#carouselCard10" data-bs-slide="next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+             <!-- ✅ Plus Button inside image bottom-left -->
+      <button class="plus-btn-inside position-absolute" data-bs-toggle="modal" data-bs-target="#coordModal"><i class="fas fa-plus"></i></button>
+
+            <span class="offer-badge position-absolute bottom-0 end-0 m-2">60% OFF</span>
+          </div>
+
+          <div class="card-body text-center">
+            <h6 class="mb-1">Printed Tunic</h6>
+            <p class="mb-0"><strong>₹749</strong> <del class="text-muted">₹1,899</del></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-3">
+        <div class="card product-card position-relative overflow-hidden border-0">
+          <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
+         
+          <div id="carouselCard11" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/coordpdt.jpeg" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="images/product1.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+            </div>
+            <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard11" data-bs-slide="prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="custom-carousel-btn carousel-control-next" type="button" data-bs-target="#carouselCard11" data-bs-slide="next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+             <!-- ✅ Plus Button inside image bottom-left -->
+      <button class="plus-btn-inside position-absolute" data-bs-toggle="modal" data-bs-target="#coordModal"><i class="fas fa-plus"></i></button>
+
+            <span class="offer-badge position-absolute bottom-0 end-0 m-2">90% OFF</span>
+          </div>
+
+          <div class="card-body text-center">
+            <h6 class="mb-1">Ethnic Wear Set</h6>
+            <p class="mb-0"><strong>₹999</strong> <del class="text-muted">₹2,999</del></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section> 
+    <!-- Co-ord Modal -->
+<div class="modal fade" id="coordModal" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content p-4">
+      <!-- Close Button -->
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <div class="modal-body">
+        <div class="row">
+          <!-- Left: Image Carousel -->
+          <div class="col-md-6">
+            <div id="coordCarouselModal" class="carousel slide" data-bs-ride="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/coordprdt.webp" class="d-block w-100" alt="Co-ord Image 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/coordp.webp" class="d-block w-100" alt="Co-ord Image 2">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#coordCarouselModal" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#coordCarouselModal" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Product Info -->
+          <div class="col-md-6" style="margin-top: 80px;">
+            <h5 class="fw-bold">Trendy Summer Co-ord Set</h5>
+            <h6 class="text-danger">₹989 <del class="text-muted fs-6 ms-2">₹1,799</del></h6>
+
+            <hr>
+
+            <p class="mb-1 fw-semibold">Color: Lemon Yellow</p>
+
+            <p class="mb-1 fw-semibold">Size:</p>
+            <div class="d-flex gap-2 mb-3">
+              <button class="btn btn-outline-dark btn-sm">S</button>
+              <button class="btn btn-outline-dark btn-sm">M</button>
+              <button class="btn btn-outline-dark btn-sm">L</button>
+            </div>
+
+            <p class="fw-semibold mb-1">Description</p>
+            <p>Comfortable and stylish cotton-blend co-ord set with modern cuts, perfect for casual wear or summer outings.</p>
+
+            <button class="btn btn-outline-dark mb-3"><i class="far fa-heart me-1"></i> Add to Wishlist</button>
+
+            <button class="btn w-100 fw-bold" style="background-color: #ff009c; color: #fff;">ADD TO CART</button>
+
+            <div class="mt-4">
+              <h6 class="fw-semibold">Delivery & Return</h6>
+              <p class="text-muted small mb-2">Free shipping on orders over ₹999</p>
+              <p class="text-muted small mb-0">Easy 7-day return policy</p>
+            </div>
+            
+            <!-- OR optionally add additional info -->
+            <div class="mt-4">
+              <h6 class="fw-semibold">Fabric Care</h6>
+              <p class="text-muted small mb-0">Hand wash separately in cold water. Use mild detergent.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Co-ord Set Banner Section -->
+<section class="dress-banner position-relative text-center text-white d-flex align-items-center justify-content-center">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Dresses Collection</h2>
+    <p class="mb-4">Explore our trendy co-ord sets made for comfort and style</p>
+    <a href="#" class="btn btn-light px-4 py-2 fw-bold rounded-pill">Shop Now</a>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+   <!-- Card 1 -->
+      <div class="col-md-3">
+        <div class="card product-card position-relative overflow-hidden border-0">
+    
+         <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
+         
+          <div id="carouselCard12" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/dresspdt.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="images/coordpdt.jpeg" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+            </div>
+            
+            <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard12" data-bs-slide="prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="custom-carousel-btn carousel-control-next" type="button" data-bs-target="#carouselCard12" data-bs-slide="next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+              <!-- ✅ Plus Button inside image bottom-left -->
+      <button class="plus-btn-inside position-absolute" data-bs-toggle="modal" data-bs-target="#dressModal"><i class="fas fa-plus"></i></button>
+
+            <span class="offer-badge position-absolute bottom-0 end-0 m-2">80% OFF</span>
+          </div>
+
+          <div class="card-body text-center">
+            <h6 class="mb-1">Summer Dresses</h6>
+            <p class="mb-0"><strong>₹849</strong> <del class="text-muted">₹999</del></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-3">
+        <div class="card product-card position-relative overflow-hidden border-0">
+          <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
+          
+          <div id="carouselCard13" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/dresspdt1.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+              <div class="carousel-item">
+              <img src="images/product.webp" class="d-block w-100 product-img" alt="img-fluid">
+            </div>
+            </div>
+            <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard13" data-bs-slide="prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="custom-carousel-btn carousel-control-next" type="button" data-bs-target="#carouselCard13" data-bs-slide="next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+             <!-- ✅ Plus Button inside image bottom-left -->
+      <button class="plus-btn-inside position-absolute" data-bs-toggle="modal" data-bs-target="#coordModal"><i class="fas fa-plus"></i></button>
+
+            <span class="offer-badge position-absolute bottom-0 end-0 m-2">70% OFF</span>
+          </div>
+
+          <div class="card-body text-center">
+            <h6 class="mb-1">Cotton DRESSES</h6>
+            <p class="mb-0"><strong>₹599</strong> <del class="text-muted">₹1,499</del></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-3">
+        <div class="card product-card position-relative overflow-hidden border-0">
+          <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
+         
+          <div id="carouselCard14" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/dresspdt2.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="images/product.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+            </div>
+            <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard14" data-bs-slide="prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="custom-carousel-btn carousel-control-next" type="button" data-bs-target="#carouselCard14" data-bs-slide="next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+             <!-- ✅ Plus Button inside image bottom-left -->
+      <button class="plus-btn-inside position-absolute" data-bs-toggle="modal" data-bs-target="#dressModal"><i class="fas fa-plus"></i></button>
+
+            <span class="offer-badge position-absolute bottom-0 end-0 m-2">60% OFF</span>
+          </div>
+
+          <div class="card-body text-center">
+            <h6 class="mb-1">Printed Tunic</h6>
+            <p class="mb-0"><strong>₹749</strong> <del class="text-muted">₹1,899</del></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-3">
+        <div class="card product-card position-relative overflow-hidden border-0">
+          <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
+         
+          <div id="carouselCard15" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/dresspdt3.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="images/product1.webp" class="d-block w-100 product-img" alt="img-fluid">
+              </div>
+            </div>
+            <button class="custom-carousel-btn carousel-control-prev" type="button" data-bs-target="#carouselCard15" data-bs-slide="prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="custom-carousel-btn carousel-control-next" type="button" data-bs-target="#carouselCard15" data-bs-slide="next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+             <!-- ✅ Plus Button inside image bottom-left -->
+      <button class="plus-btn-inside position-absolute" data-bs-toggle="modal" data-bs-target="#dressModal"><i class="fas fa-plus"></i></button>
+
+            <span class="offer-badge position-absolute bottom-0 end-0 m-2">90% OFF</span>
+          </div>
+
+          <div class="card-body text-center">
+            <h6 class="mb-1">Ethnic Wear Set</h6>
+            <p class="mb-0"><strong>₹999</strong> <del class="text-muted">₹2,999</del></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section> 
+
+<div class="modal fade" id="dressModal" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content p-4">
+      <!-- Close Button -->
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <div class="modal-body">
+        <div class="row">
+          <!-- Left: Image Carousel -->
+          <div class="col-md-6">
+            <div id="coordCarouselModal" class="carousel slide" data-bs-ride="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/dresspdt.webp" class="d-block w-100" alt="Co-ord Image 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/coordp.webp" class="d-block w-100" alt="Co-ord Image 2">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#coordCarouselModal" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#coordCarouselModal" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Product Info -->
+          <div class="col-md-6" style="margin-top: 80px;">
+            <h5 class="fw-bold">Trendy Summer</h5>
+            <h6 class="text-danger">₹989 <del class="text-muted fs-6 ms-2">₹1,799</del></h6>
+
+            <hr>
+
+            <p class="mb-1 fw-semibold">Color: Lemon Yellow</p>
+
+            <p class="mb-1 fw-semibold">Size:</p>
+            <div class="d-flex gap-2 mb-3">
+              <button class="btn btn-outline-dark btn-sm">S</button>
+              <button class="btn btn-outline-dark btn-sm">M</button>
+              <button class="btn btn-outline-dark btn-sm">L</button>
+            </div>
+
+            <p class="fw-semibold mb-1">Description</p>
+            <p>Comfortable and stylish cotton-blend co-ord set with modern cuts, perfect for casual wear or summer outings.</p>
+
+            <button class="btn btn-outline-dark mb-3"><i class="far fa-heart me-1"></i> Add to Wishlist</button>
+
+            <button class="btn w-100 fw-bold" style="background-color: #ff009c; color: #fff;">ADD TO CART</button>
+
+            <div class="mt-4">
+              <h6 class="fw-semibold">Delivery & Return</h6>
+              <p class="text-muted small mb-2">Free shipping on orders over ₹999</p>
+              <p class="text-muted small mb-0">Easy 7-day return policy</p>
+            </div>
+            
+            <!-- OR optionally add additional info -->
+            <div class="mt-4">
+              <h6 class="fw-semibold">Fabric Care</h6>
+              <p class="text-muted small mb-0">Hand wash separately in cold water. Use mild detergent.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -482,7 +1275,95 @@
   </div>
 </div>
 
-    
+<section class="contact-banner d-flex align-items-center text-center text-white">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Get in Touch with Us</h2>
+    <p class="mb-4">We're here to help you with any inquiries or support</p>
+    <a href="#contact" class="btn btn-outline-light px-4 py-2 fw-bold">Contact Us</a>
+  </div>
+</section>
+<section class="py-5 feature-icons-section" style="background-color: #ebd1e1;">
+  <div class="container">
+    <div class="row text-center gy-4">
+      <div class="col-6 col-md-2 mx-auto">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' stroke='black' stroke-width='2' viewBox='0 0 24 24'><path d='M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z'/></svg>" alt="Best Quality" />
+        <br><p class="mb-0 small text-uppercase fw-bold">Best Quality</p>
+      </div>
+      <div class="col-6 col-md-2 mx-auto">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' stroke='black' stroke-width='2' viewBox='0 0 24 24'><path d='M3 3h13v13H3V3zm13 6h5l-1.5-3H16v3zm1 7a2 2 0 11-4 0 2 2 0 014 0zm-10 0a2 2 0 11-4 0 2 2 0 014 0z'/></svg>" alt="Free Delivery" />
+        <br> <p class="mb-0 small text-uppercase fw-bold">Free Delivery</p>
+      </div>
+      <div class="col-6 col-md-2 mx-auto">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' stroke='black' stroke-width='2' viewBox='0 0 24 24'><rect x='2' y='7' width='20' height='10' rx='2' ry='2'/><circle cx='12' cy='12' r='2'/></svg>" alt="Cash on Delivery" />
+        <br><p class="mb-0 small text-uppercase fw-bold">Cash On Delivery</p>
+      </div>
+      <div class="col-6 col-md-2 mx-auto">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' stroke='black' stroke-width='2' viewBox='0 0 24 24'><path d='M3 2v6h6M21 12A9 9 0 006 5.3l-1.6 1.2'/></svg>" alt="Easy Return" />
+        <br><p class="mb-0 small text-uppercase fw-bold">Easy Return</p>
+      </div>
+      <div class="col-6 col-md-2 mx-auto">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' stroke='black' stroke-width='2' viewBox='0 0 24 24'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>" alt="Secure Payment" />
+        <br><p class="mb-0 small text-uppercase fw-bold">Secure Payment</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-left">
+    <div class="row">
+
+      <!-- Brand/Logo Section -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">Shop</h5><br>
+        <p>Discover stylish and affordable fashion for everyone. Fast shipping, easy returns, and secure payment.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white-50 text-decoration-none">Home</a></li><br>
+          <li><a href="#" class="text-white-50 text-decoration-none">Shop</a></li><br>
+          <li><a href="#" class="text-white-50 text-decoration-none">Offers</a></li><br>
+          <li><a href="#" class="text-white-50 text-decoration-none">About Us</a></li><br>
+        </ul>
+      </div>
+
+      <!-- Customer Service -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-3">Customer Service</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white-50 text-decoration-none">FAQs</a></li><br>
+          <li><a href="#" class="text-white-50 text-decoration-none">Shipping & Returns</a></li><br>
+          <li><a href="#" class="text-white-50 text-decoration-none">Terms & Conditions</a></li><br>
+          <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li><br>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 col-lg-4 col-xl-4 mb-4">
+        <h6 class="text-uppercase fw-bold mb-3">Contact</h6>
+        <p><i class="fas fa-map-marker-alt me-2"></i> 123 Fashion Street, City, IN</p>
+        <p><i class="fas fa-envelope me-2"></i> support@shopmate.com</p>
+        <p><i class="fas fa-phone me-2"></i> +91 98765 43210</p>
+        <div class="d-flex gap-3 mt-2">
+          <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-light" />
+    <div class="text-center text-white-50">
+      © 2025 ShopMate. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+
   <!-- Bootstrap Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
