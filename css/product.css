@@ -81,3 +81,10 @@
     }
   }
     
+  @media (max-width: 768px) {
+    .product-img {
+      height: 200px; /* Adjust height as needed */
+      object-fit: cover;
+    }
+  }
+  
