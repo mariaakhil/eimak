@@ -128,19 +128,93 @@ body {
   #promoBanner {
     transition: opacity 0.3s ease;
   }
+  
   .promo-banner {
     background-color: #ff009c;
-    font-size: 12px;
+    font-size: 8px;
     z-index: 1040;
     width: 100%;
-    transition: top 0.3s ease;
     height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    position: relative; /* Keep it from overlaying navbar */
+    transition: top 0.3s ease;
   }
   
   .promo-hidden {
     display: none;
   }
   
+ 
+  /* Promo banner height compensation */
+.mt-with-banner {
+  top: 32px;
+}
+
+.mt-no-banner {
+  top: 0 !important;
+}
+
+/* Remove box shadow if you want flat navbar look */
+.scrolled {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+/* Smaller gap for icons */
+.navbar .nav-icon {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* For mobile view */
+@media (max-width: 768px) {
+  .navbar .nav-icon {
+    margin-left: 8px;
+    font-size: 14px;
+  }
+}
+
+  
+    
+
+/* Banner height compensation only for mobile */
+@media (max-width: 768px) {
+  .mt-with-banner {
+    top: 10px !important;
+  }
+
+  .mt-no-banner {
+    top: 0 !important;
+  }
+
+  #mainNavbar {
+    top: 32px; /* Default position under banner */
+  }
+
+  .navbar.scrolled {
+    top: 0 !important; /* Stick to top when banner hides */
+  }
+
+  #promoBanner {
+    font-size: 10px;
+    padding: 6px 10px;
+    height: auto;
+    line-height: normal;
+  }
+}
+
+/* Desktop - don't apply margin top */
+@media (min-width: 769px) {
+  .mt-with-banner,
+  .mt-no-banner {
+    top: 0 !important;
+  }
+
+  #mainNavbar {
+    top: 0 !important;
+  }
+}
+
 
 
   .carousel-caption {

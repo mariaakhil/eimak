@@ -138,7 +138,8 @@
   
 
   <!-- Navbar -->
-  <nav id="mainNavbar" class="navbar fixed-top w-100 transition-navbar" style="margin-top: 20px;">
+  <nav id="mainNavbar" class="navbar fixed-top w-100 mt-with-banner transition-navbar">
+
     <div class="container-fluid px-3 position-relative">
         <div class="position-absolute top-50 start-0 translate-middle-y ms-2">
           <button class="btn border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
@@ -1303,40 +1304,34 @@
 
   <!-- Shrink on Scroll Script -->
   <script>
-   const promoBanner = document.getElementById('promoBanner'); // make sure ID matches your HTML
+  
+  const promoBanner = document.getElementById('promoBanner');
   const mainNavbar = document.getElementById('mainNavbar');
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      // Hide banner and move navbar to top
+    const scrollY = window.scrollY;
+
+    if (scrollY > 20) {
+      // Hide promo banner
       if (promoBanner) promoBanner.classList.add('d-none');
+
+      // Move navbar to top and apply style
       if (mainNavbar) {
         mainNavbar.classList.remove('mt-with-banner');
-        mainNavbar.classList.add('mt-no-banner');
-        mainNavbar.classList.add('shrink'); // optional: shrink navbar
+        mainNavbar.classList.add('mt-no-banner', 'scrolled');
       }
     } else {
-      // Show banner and push navbar down
+      // Show promo banner
       if (promoBanner) promoBanner.classList.remove('d-none');
+
+      // Push navbar below banner
       if (mainNavbar) {
-        mainNavbar.classList.remove('mt-no-banner');
+        mainNavbar.classList.remove('mt-no-banner', 'scrolled');
         mainNavbar.classList.add('mt-with-banner');
-        mainNavbar.classList.remove('shrink');
       }
     }
   });
 
-
-
-  const navbar = document.getElementById('mainNavbar');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
 
 
 
