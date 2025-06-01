@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add To Cart</title>
+    <title>Sign up</title>
     <!-- Bootstrap 5 CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,7 +23,7 @@
 </head>
 <style>
  
-  #mainNavbar {
+#mainNavbar {
     background-color: transparent;
     transition: all 0.4s ease;
   }
@@ -61,173 +61,190 @@
     display: inline;
   }
 
-  
  
   
+  
 
-  @media (max-width: 768px) {
-    .cart-item {
-      flex-direction: column !important;
-      align-items: flex-start !important;
-    }
-  }
+  
 
-  .nav-icon i {
-    color: #000;
-    transition: color 0.3s ease;
-  }
-  @media (max-width: 768px) {
-  .nav-icon {
-    color: #000;
-    font-size: 14px; /* or 12px */
+  .login-section {
+  background-color: #f9f9f9;
+}
 
-  }
+.card {
+  border-radius: 10px;
+}
+
+input::placeholder {
+  font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {
   .navbar-brand img {
     height: 18px !important; /* or 15px depending on your design */
+    
   }
 }
-.modal-content img {
-  max-height: 80vh;
-  object-fit: contain;
+@media (max-width: 768px) {
+  .login-wrapper {
+    margin-top: 100px; /* adjust if your navbar + banner height differs */
+  }
 }
+
+
+.center-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin-top: 50px;
+    }
+
+
+.register-card {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      justify-content: center;
+    }
+    .register-card h2 {
+      color: #ff009c;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .form-control:focus {
+      border-color: #ff009c;
+      box-shadow: 0 0 0 0.1rem rgba(255, 0, 156, 0.25);
+    }
+    .btn-primary {
+      background-color: #ff009c;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #e60088;
+    }
+
 
 </style>
 <body>
 
-    <!-- Promo Banner -->
-    <div id="promoBanner" class="text-center text-white py-2 fixed-top" style="background-color: #ff009c; font-size: 12px; z-index: 1040;">
-      <strong>SAVE EXTRA: ENJOY AN EXTRA 3% OFF ON YOUR PREPAID ORDERS.</strong>
-    </div>
-    
+  <!-- Promo Banner -->
+  <div id="promoBanner" class="text-center text-white py-2 fixed-top" style="background-color: #ff009c; font-size: 12px; z-index: 1040;">
+    <strong>SAVE EXTRA: ENJOY AN EXTRA 3% OFF ON YOUR PREPAID ORDERS.</strong>
+  </div>
   
-    <!-- Navbar -->
-  <nav id="mainNavbar" class="navbar fixed-top w-100 transition-navbar" style="margin-top: 20px;">
-      <div class="container-fluid px-3 position-relative">
-          <div class="position-absolute top-50 start-0 translate-middle-y ms-2">
-            <button class="btn border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
-              <i class="fas fa-bars fa-lg nav-icon" style="color: #000;"></i>
-            </button>
-            
-            </div>
-  
-        <!-- Center: Logo -->
-        <div class="mx-auto text-center mt-2">
-          <a class="navbar-brand" href="#">
-            <!-- White logo (visible by default) -->
-            <img src="images/logo.png" class="logo-white img-fluid" style="height: 25px;" alt="Logo">
-            <!-- Black logo (visible after scroll) -->
-            <img src="images/logo.png" class="logo-black img-fluid " style="height: 25px;" alt="Logo">
-          </a>
+
+  <!-- Navbar -->
+<nav id="mainNavbar" class="navbar fixed-top w-100 transition-navbar" style="margin-top: 20px;">
+    <div class="container-fluid px-3 position-relative">
+        <div class="position-absolute top-50 start-0 translate-middle-y ms-2">
+          <button class="btn border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+            <i class="fas fa-bars fa-lg nav-icon" style="color: #000;"></i>
+          </button>
           
-        </div>
-      <!-- Desktop Icons -->
-      <div class="position-absolute top-50 end-0 translate-middle-y d-none d-sm-flex align-items-center gap-4 pe-4">
-          <a href="javascript:void(0);" id="searchToggle" class="nav-icon"><i class="fas fa-search" style="color: black;"></i></a>
-          <a href="#" class="nav-icon"><i class="fas fa-user" style="color: black;"></i></a>
-          <a href="#" class="nav-icon"><i class="fas fa-shopping-bag" style="color: black;"></i></a>
-        </div>
-  
-  
-  <!-- Mobile Only Icons -->
-  <div class="position-absolute top-50 end-0 translate-middle-y d-flex d-sm-none align-items-center gap-3 pe-3">
-      <a href="javascript:void(0);" id="searchToggleMobile" class="nav-icon"><i class="fas fa-search fs-6" style="color: #000;"></i></a>
-      <a href="#" class="nav-icon"><i class="fas fa-user fs-6" style="color: #000;"></i></a>
-      <a href="#" class="nav-icon"><i class="fas fa-shopping-bag fs-6" style="color: #000;"></i></a>
-    </div>
-  
+          </div>
+
+      <!-- Center: Logo -->
+      <div class="mx-auto text-center mt-2">
+        <a class="navbar-brand" href="#">
+          <!-- White logo (visible by default) -->
+          <img src="images/logo.png" class="logo-white img-fluid" style="height: 25px;" alt="Logo">
+          <!-- Black logo (visible after scroll) -->
+          <img src="images/logo.png" class="logo-black img-fluid " style="height: 25px;" alt="Logo">
+        </a>
         
-  <!-- Search Toggle Box (Initially Hidden) -->
-  <div id="searchBox" class="search-box bg-white shadow-sm py-3 px-4 d-none position-absolute w-100" style="top: 100%; z-index: 999;">
-    <div class="container">
+      </div>
+    <!-- Desktop Icons -->
+    <div class="position-absolute top-50 end-0 translate-middle-y d-none d-sm-flex align-items-center gap-4 pe-4">
+        <a href="javascript:void(0);" id="searchToggle" class="nav-icon"><i class="fas fa-search" style="color: black;"></i></a>
+        <a href="#" class="nav-icon"><i class="fas fa-user" style="color: black;"></i></a>
+        <a href="#" class="nav-icon"><i class="fas fa-shopping-bag" style="color: black;"></i></a>
+      </div>
+
+
+<!-- Mobile Only Icons -->
+<div class="position-absolute top-50 end-0 translate-middle-y d-flex d-sm-none align-items-center gap-3 pe-3">
+    <a href="javascript:void(0);" id="searchToggleMobile" class="nav-icon"><i class="fas fa-search fs-6" style="color: #000;"></i></a>
+    <a href="#" class="nav-icon"><i class="fas fa-user fs-6" style="color: #000;"></i></a>
+    <a href="#" class="nav-icon"><i class="fas fa-shopping-bag fs-6" style="color: #000;"></i></a>
+  </div>
+
+      
+<!-- Search Toggle Box (Initially Hidden) -->
+<div id="searchBox" class="search-box bg-white shadow-sm py-3 px-4 d-none position-absolute w-100" style="top: 100%; z-index: 999;">
+  <div class="container">
+    <form>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search...">
+        <button class="btn btn" type="submit" style="background-color: #ff009c;">Go</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+  
+
+
+    </div>
+  </nav>
+<!-- Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-unstyled fs-5">
+        <li class="mb-3"><a href="#" class="text-dark text-decoration-none">NEW IN</a></li>
+        <li class="mb-3 d-flex justify-content-between">
+          <a href="#" class="text-dark text-decoration-none">COLLECTIONS</a><span>&rsaquo;</span>
+        </li>
+        <li class="mb-3 d-flex justify-content-between">
+          <a href="#" class="text-dark text-decoration-none">CATEGORY</a><span>&rsaquo;</span>
+        </li>
+        <li class="mb-3 d-flex justify-content-between">
+          <a href="#" class="text-dark text-decoration-none">SPECIAL EDITS</a><span>&rsaquo;</span>
+        </li>
+        <li class="mb-3"><a href="#" class="text-dark text-decoration-none">PLUS SIZE</a></li>
+        <li class="mb-3"><a href="#" class="text-dark text-decoration-none">MATERNITY</a></li>
+        <li class="mb-3"><a href="#" class="text-dark text-decoration-none">BESTSELLERS</a></li>
+        <li><a href="#" class="text-dark text-decoration-none">SPECIAL OFFER</a></li>
+      </ul>
+    </div>
+</div>
+
+
+<body>
+    <div class="center-wrapper">
+    <div class="register-card">
+      <h2>Create Account</h2>
       <form>
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search...">
-          <button class="btn btn" type="submit" style="background-color: #ff009c;">Go</button>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="First Name" required>
         </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Last Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Email Address" required>
+        </div>
+        <div class="mb-3">
+          <input type="tel" class="form-control" placeholder="Phone Number" required>
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder="Password" required>
+        </div>
+        <div class="mb-4">
+          <input type="password" class="form-control" placeholder="Confirm Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Register</button>
       </form>
+      <p class="text-center mt-3">Already have an account? <a href="#" class="text-decoration-none" style="color: #ff009c;">Login</a></p>
     </div>
-  </div>
-  
-    
-  
-  
-      </div>
-    </nav>
-  <!-- Offcanvas Sidebar -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
-      <div class="offcanvas-header">
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="list-unstyled fs-5">
-          <li class="mb-3"><a href="#" class="text-dark text-decoration-none">NEW IN</a></li>
-          <li class="mb-3 d-flex justify-content-between">
-            <a href="#" class="text-dark text-decoration-none">COLLECTIONS</a><span>&rsaquo;</span>
-          </li>
-          <li class="mb-3 d-flex justify-content-between">
-            <a href="#" class="text-dark text-decoration-none">CATEGORY</a><span>&rsaquo;</span>
-          </li>
-          <li class="mb-3 d-flex justify-content-between">
-            <a href="#" class="text-dark text-decoration-none">SPECIAL EDITS</a><span>&rsaquo;</span>
-          </li>
-          <li class="mb-3"><a href="#" class="text-dark text-decoration-none">PLUS SIZE</a></li>
-          <li class="mb-3"><a href="#" class="text-dark text-decoration-none">MATERNITY</a></li>
-          <li class="mb-3"><a href="#" class="text-dark text-decoration-none">BESTSELLERS</a></li>
-          <li><a href="#" class="text-dark text-decoration-none">SPECIAL OFFER</a></li>
-        </ul>
-      </div>
-  </div>
-
-
-<section class="py-5" style="margin-top: 40px;">
-    <div class="container">
-      <h2 class="mb-4 text-center">Your Shopping Cart</h2>
-      <div class="row g-4">
-        <!-- Cart Items -->
-        <div class="col-lg-8">
-          <div class="card p-3 shadow-sm mb-4">
-            <div class="d-flex flex-column flex-md-row align-items-center gap-3 cart-item">
-              <img src="images/dresspdt.webp" class="img-fluid rounded" style="width: 100px; height: 100px; object-fit: cover;" alt="Product Image">
-              <div class="flex-grow-1">
-                <h6 class="fw-bold mb-1">Summer Dress</h6>
-                <p class="text-muted mb-1">Qty: 
-                  <input type="number" value="1" min="1" class="form-control d-inline-block" style="width: 70px;">
-                </p>
-                <p class="text-danger fw-semibold">₹849</p>
-              </div>
-              <button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
-            </div>
-          </div>
-          <!-- Add more cart items if needed -->
-        </div>
-  
-        <!-- Cart Summary -->
-        <div class="col-lg-4">
-          <div class="card p-4 shadow-sm">
-            <h5 class="fw-bold mb-3">Order Summary</h5>
-            <div class="d-flex justify-content-between mb-2">
-              <span>Subtotal</span>
-              <span>₹849</span>
-            </div>
-            <div class="d-flex justify-content-between mb-2">
-              <span>Shipping</span>
-              <span>₹50</span>
-            </div>
-            <div class="d-flex justify-content-between border-top pt-2 fw-bold">
-              <span>Total</span>
-              <span>₹899</span>
-            </div>
-            <a href="#" class="btn btn-dark w-100 mt-3">Proceed to Checkout</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  
+</div>
 
 
   
@@ -285,8 +302,7 @@
       </div>
     </div>
   </footer>
-  
-  <!-- Bootstrap Bundle -->
+   <!-- Bootstrap Bundle -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -341,6 +357,12 @@
  
     
   
+ 
+ 
+ 
+   
+ 
+   
    
    // Sync on slide change
    carousel.addEventListener('slide.bs.carousel', function (e) {
