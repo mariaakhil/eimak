@@ -61,57 +61,6 @@
     display: inline;
   }
 
-  .image-banner {
-    background: url('images/banner.jpg') no-repeat center center;
-    background-size: cover;
-    height: 60vh;
-    padding: 60px 20px;
-    color: #fff;
-    position: relative;
-  }
-  
-  .image-banner::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5); /* Optional dark overlay for better text readability */
-    z-index: 1;
-  }
-  
-  .image-banner .container {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .image-banner h2 {
-    font-size: 2.5rem;
-  }
-  
-  .image-banner p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .image-banner {
-      height: auto;
-      padding: 60px 20px;
-      background-size: contain;
-      background-position: top center;
-    }
-  
-    .image-banner h2 {
-      font-size: 1.6rem;
-    }
-  
-    .image-banner p {
-      font-size: 1rem;
-    }
-  }
   
 
   
@@ -159,8 +108,28 @@
 @media (max-width: 768px) {
   .card {
     margin-bottom: 1rem;
+    margin-top: 20px;
   }
 }
+.nav-icon i {
+    color: #000;
+    transition: color 0.3s ease;
+  }
+  @media (max-width: 768px) {
+  .nav-icon {
+    color: #000;
+    font-size: 14px; /* or 12px */
+
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 18px !important; /* or 15px depending on your design */
+  }
+}
+
+
 
 </style>
 <body>
@@ -176,7 +145,7 @@
     <div class="container-fluid px-3 position-relative">
         <div class="position-absolute top-50 start-0 translate-middle-y ms-2">
           <button class="btn border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
-            <i class="fas fa-bars fa-lg nav-icon"></i>
+            <i class="fas fa-bars fa-lg nav-icon"  style="color: #000;"></i>
           </button>
           
           </div>
@@ -185,27 +154,26 @@
       <div class="mx-auto text-center mt-2">
         <a class="navbar-brand" href="#">
           <!-- White logo (visible by default) -->
-          <img src="images/whitelogo.png" class="logo-white img-fluid" style="height: 25px;" alt="Logo">
+          <img src="images/logo.png" class="logo-white img-fluid" style="height: 25px;" alt="Logo">
           <!-- Black logo (visible after scroll) -->
           <img src="images/logo.png" class="logo-black img-fluid " style="height: 25px;" alt="Logo">
         </a>
         
       </div>
+      <br>
     <!-- Desktop Icons -->
-<div class="position-absolute top-50 end-0 translate-middle-y d-none d-sm-flex align-items-center gap-4 pe-4 ">
-  <a href="javascript:void(0);" id="searchToggle" class="nav-icon"><i class="fas fa-search"></i></a>
-  <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
-  <a href="#" class="nav-icon"><i class="fas fa-shopping-bag"></i></a>
-</div>
-
-      <!-- Mobile Icons -->
-
+    <div class="position-absolute top-50 end-0 translate-middle-y d-none d-sm-flex align-items-center gap-4 pe-4">
+      <a href="javascript:void(0);" id="searchToggle" class="nav-icon"><i class="fas fa-search" style="color: black;"></i></a>
+      <a href="#" class="nav-icon"><i class="fas fa-user" style="color: black;"></i></a>
+      <a href="#" class="nav-icon"><i class="fas fa-shopping-bag" style="color: black;"></i></a>
+    </div>
+    
 
 <!-- Mobile Only Icons -->
 <div class="position-absolute top-50 end-0 translate-middle-y d-flex d-sm-none align-items-center gap-3 pe-3">
-  <a href="javascript:void(0);" id="searchToggleMobile" class="nav-icon"><i class="fas fa-search"></i></a>
-  <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
-  <a href="#" class="nav-icon"><i class="fas fa-shopping-bag"></i></a>
+  <a href="javascript:void(0);" id="searchToggleMobile" class="nav-icon"><i class="fas fa-search fs-6" style="color: #000;"></i></a>
+  <a href="#" class="nav-icon"><i class="fas fa-user fs-6" style="color: #000;"></i></a>
+  <a href="#" class="nav-icon"><i class="fas fa-shopping-bag fs-6" style="color: #000;"></i></a>
 </div>
 
       
@@ -250,19 +218,14 @@
       </ul>
     </div>
 </div>
-<section class="image-banner d-flex align-items-center justify-content-center text-center text-white">
-    <div class="container">
-      <h2 class="fw-bold mb-3">checkout</h2>
-      
-    </div>
-</section>
+<br>
 <section class="py-5">
     <div class="container">
         <div class="row g-4 flex-column flex-lg-row">
         <!-- Left: Billing + Payment -->
         <div class="col-lg-7 order-1 order-lg-0">
           <!-- Billing Info -->
-          <div class="card p-4 shadow-sm mb-4">
+          <div class="card p-4 shadow-sm mb-4" style="margin-top: 20px;">
             <h5 class="fw-bold mb-3">Billing Information</h5>
             <form>
               <div class="row g-3">
@@ -324,12 +287,12 @@
           <div class="text-center">
             <button class="btn w-100 py-2 fw-bold text-white" style="background-color: #ff009c;">Pay now</button>
           </div>
-        </div>
+        </div><br>
   
         <!-- Right: Order Summary -->
         <!-- Order Summary FIRST for mobile -->
 <div class="col-lg-5 order-0 order-lg-1 mb-4 mb-lg-0">
-    <div class="card p-4 shadow-sm sticky-lg-top" style="top: 100px;">
+    <div class="card p-4 shadow-sm sticky-lg-top" style="top: 90px;">
       <h5 class="fw-bold mb-3">Order Summary</h5>
       <ul class="list-group mb-3">
         <li class="list-group-item d-flex justify-content-between">
