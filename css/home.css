@@ -217,6 +217,32 @@ body {
 
 
 
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #searchBox {
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  #searchBox input.form-control {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #searchBox .btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+
+
+
   .carousel-caption {
     bottom: 20%;
   }
