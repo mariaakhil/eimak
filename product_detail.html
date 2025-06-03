@@ -11,19 +11,19 @@
 <!-- Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="css/home.css" type="text/css">
-
+<link rel="stylesheet" href="css/product.css" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<!-- Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
 </head>
 <style>
  
-  #mainNavbar {
+#mainNavbar {
     background-color: transparent;
     transition: all 0.4s ease;
   }
@@ -61,482 +61,405 @@
     display: inline;
   }
 
+ 
+ 
 
+  
   
 
   
 
-  
+ 
 
- /* Sticky Left Side on Desktop */
-.sticky-image-section {
-  position: sticky;
-  top: 100px;
-}
+  .product-main-image {
+      max-height: 500px;
+      width: auto;
+      object-fit: cover;
+    }
+    .thumb-img {
+      width: 70px;
+      height: 70px;
+      cursor: pointer;
+      object-fit: cover;
+    }
+    .modal-img {
+      max-height: 75vh;
+      object-fit: contain;
+    }
+    @media (max-width: 768px) {
+      .product-main-image {
+        max-height: 200px;
+      }
+    }
 
-
-
-.thumb-img:hover {
-  border-color: #ff009c;
-}
-
-/* Mobile View Adjustments */
-@media (max-width: 991.98px) {
-  .sticky-image-section {
-    position: static;
-  }
-}
-/* Main image size adjustment for desktop */
-@media (min-width: 992px) {
-  #mainImage {
-    max-height: 500px;
-    object-fit: contain;
-  }
-}
-
-.thumb-img {
-  width: 60px;
-  height: 80px;
-  object-fit: cover;
-  cursor: pointer;
-  
-  transition: 0.2s;
-}
-@media (max-width: 992px) {
-  #mainImage {
-    margin-top: 100px;
-  }
-}
-@media (max-width: 768px) {
-  #mainImage {
-    margin-top: 100px; /* Adjust as needed */
-  }
-}
-
-
-.nav-icon i {
-    color: #000;
-    transition: color 0.3s ease;
-  }
-  @media (max-width: 768px) {
-  .nav-icon {
-    color: #000;
-    font-size: 14px; /* or 12px */
-
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-brand img {
-    height: 18px !important; /* or 15px depending on your design */
-  }
-}
-.modal-content img {
-  max-height: 80vh;
-  object-fit: contain;
-}
 
 </style>
 <body>
 
-    <!-- Promo Banner -->
-    <div id="promoBanner" class="text-center text-white py-2 fixed-top" style="background-color: #ff009c; font-size: 12px; z-index: 1040;">
-      <strong>SAVE EXTRA: ENJOY AN EXTRA 3% OFF ON YOUR PREPAID ORDERS.</strong>
-    </div>
-    
-  
-    <!-- Navbar -->
-  <nav id="mainNavbar" class="navbar fixed-top w-100 transition-navbar" style="margin-top: 20px;">
-      <div class="container-fluid px-3 position-relative">
-          <div class="position-absolute top-50 start-0 translate-middle-y ms-2">
-            <button class="btn border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
-              <i class="fas fa-bars fa-lg nav-icon" style="color: #000;"></i>
-            </button>
-            
-            </div>
-  
-        <!-- Center: Logo -->
-        <div class="mx-auto text-center mt-2">
-          <a class="navbar-brand" href="#">
-            <!-- White logo (visible by default) -->
-            <img src="images/logo.png" class="logo-white img-fluid" style="height: 25px;" alt="Logo">
-            <!-- Black logo (visible after scroll) -->
-            <img src="images/logo.png" class="logo-black img-fluid " style="height: 25px;" alt="Logo">
-          </a>
-          
-        </div>
-      <!-- Desktop Icons -->
-      <div class="position-absolute top-50 end-0 translate-middle-y d-none d-sm-flex align-items-center gap-4 pe-4">
-          <a href="javascript:void(0);" id="searchToggle" class="nav-icon"><i class="fas fa-search" style="color: black;"></i></a>
-          <a href="#" class="nav-icon"><i class="fas fa-user" style="color: black;"></i></a>
-          <a href="#" class="nav-icon"><i class="fas fa-shopping-bag" style="color: black;"></i></a>
-        </div>
-  
-  
-  <!-- Mobile Only Icons -->
-  <div class="position-absolute top-50 end-0 translate-middle-y d-flex d-sm-none align-items-center gap-3 pe-3">
-      <a href="javascript:void(0);" id="searchToggleMobile" class="nav-icon"><i class="fas fa-search fs-6" style="color: #000;"></i></a>
-      <a href="#" class="nav-icon"><i class="fas fa-user fs-6" style="color: #000;"></i></a>
-      <a href="#" class="nav-icon"><i class="fas fa-shopping-bag fs-6" style="color: #000;"></i></a>
-    </div>
-  
-        
-  <!-- Search Toggle Box (Initially Hidden) -->
-  <div id="searchBox" class="search-box bg-white shadow-sm py-3 px-4 d-none position-absolute w-100" style="top: 100%; z-index: 999;">
-    <div class="container">
-      <form>
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search...">
-          <button class="btn btn" type="submit" style="background-color: #ff009c;">Go</button>
-        </div>
-      </form>
-    </div>
+  <!-- Promo Banner -->
+  <div id="promoBanner" class="text-center text-white py-2 fixed-top" style="background-color: #ff009c; font-size: 12px; z-index: 1040;">
+    <strong>SAVE EXTRA: ENJOY AN EXTRA 3% OFF ON YOUR PREPAID ORDERS.</strong>
   </div>
   
-    
-  
-  
+
+  <!-- Navbar -->
+  <nav id="mainNavbar" class="navbar fixed-top w-100 mt-with-banner transition-navbar">
+
+    <div class="container px-3 position-relative">
+        <div class="position-absolute top-50 start-0 translate-middle-y ms-2">
+          <button class="btn border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+            <i class="fas fa-bars fa-lg nav-icon" style="color: #000;"></i>
+          </button>
+          
+          </div>
+
+      <!-- Center: Logo -->
+      <div class="mx-auto text-center mt-2">
+        <a class="navbar-brand" href="#">
+          <!-- White logo (visible by default) -->
+          <img src="images/logo.png" class="logo-white img-fluid" style="height: 25px;" alt="Logo">
+          <!-- Black logo (visible after scroll) -->
+          <img src="images/logo.png" class="logo-black img-fluid " style="height: 25px;" alt="Logo">
+        </a>
+        
       </div>
-    </nav>
-  <!-- Offcanvas Sidebar -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
-      <div class="offcanvas-header">
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    <!-- Desktop Icons -->
+<div class="position-absolute top-50 end-0 translate-middle-y d-none d-sm-flex align-items-center gap-4 pe-4 ">
+  <a href="javascript:void(0);" id="searchToggle" class="nav-icon"><i class="fas fa-search" style="color: #000;"></i></a>
+  <a href="#" class="nav-icon"><i class="fas fa-user" style="color: #000;"></i></a>
+  <a href="#" class="nav-icon"><i class="fas fa-shopping-bag" style="color: #000;"></i></a>
+</div>
+
+      <!-- Mobile Icons -->
+
+
+<!-- Mobile Only Icons -->
+<div class="position-absolute top-50 end-0 translate-middle-y d-flex d-sm-none align-items-center gap-3 pe-3">
+  <a href="javascript:void(0);" id="searchToggleMobile" class="nav-icon"><i class="fas fa-search" style="color: #000;"></i></a>
+  <a href="#" class="nav-icon"><i class="fas fa-user" style="color: #000;"></i></a>
+  <a href="#" class="nav-icon"><i class="fas fa-shopping-bag" style="color: #000;"></i></a>
+</div>
+
+      
+<!-- Search Toggle Box (Initially Hidden) -->
+<div id="searchBox" class="search-box bg-white shadow-sm py-3 px-4 d-none position-absolute w-100" style="top: 100%; z-index: 999;">
+  <div class="container">
+    <form>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search...">
+        <button class="btn btn" type="submit" style="background-color: #ff009c;">Go</button>
       </div>
-      <div class="offcanvas-body">
-        <ul class="list-unstyled fs-5">
-          <li class="mb-3"><a href="#" class="text-dark text-decoration-none">NEW IN</a></li>
-          <li class="mb-3 d-flex justify-content-between">
-            <a href="#" class="text-dark text-decoration-none">COLLECTIONS</a><span>&rsaquo;</span>
-          </li>
-          <li class="mb-3 d-flex justify-content-between">
-            <a href="#" class="text-dark text-decoration-none">CATEGORY</a><span>&rsaquo;</span>
-          </li>
-          <li class="mb-3 d-flex justify-content-between">
-            <a href="#" class="text-dark text-decoration-none">SPECIAL EDITS</a><span>&rsaquo;</span>
-          </li>
-          <li class="mb-3"><a href="#" class="text-dark text-decoration-none">PLUS SIZE</a></li>
-          <li class="mb-3"><a href="#" class="text-dark text-decoration-none">MATERNITY</a></li>
-          <li class="mb-3"><a href="#" class="text-dark text-decoration-none">BESTSELLERS</a></li>
-          <li><a href="#" class="text-dark text-decoration-none">SPECIAL OFFER</a></li>
+    </form>
+  </div>
+</div>
+
+  
+
+
+    </div>
+  </nav>
+<!-- Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-unstyled fs-5">
+        <li class="mb-3"><a href="#" class="text-dark text-decoration-none">NEW IN</a></li>
+        <li class="mb-3 d-flex justify-content-between">
+          <a href="#" class="text-dark text-decoration-none">COLLECTIONS</a><span>&rsaquo;</span>
+        </li>
+        <li class="mb-3 d-flex justify-content-between">
+          <a href="#" class="text-dark text-decoration-none">CATEGORY</a><span>&rsaquo;</span>
+        </li>
+        <li class="mb-3 d-flex justify-content-between">
+          <a href="#" class="text-dark text-decoration-none">SPECIAL EDITS</a><span>&rsaquo;</span>
+        </li>
+        <li class="mb-3"><a href="#" class="text-dark text-decoration-none">PLUS SIZE</a></li>
+        <li class="mb-3"><a href="#" class="text-dark text-decoration-none">MATERNITY</a></li>
+        <li class="mb-3"><a href="#" class="text-dark text-decoration-none">BESTSELLERS</a></li>
+        <li><a href="#" class="text-dark text-decoration-none">SPECIAL OFFER</a></li>
+      </ul>
+    </div>
+</div>
+
+<div class="container py-5" style="margin-top: 100px;">
+  <div class="row">
+    <!-- Left: Image section -->
+    <div class="col-lg-6">
+      <img id="mainImage" src="images/dresspdt.webp" class="img-fluid mb-3" alt="Product Image" data-bs-toggle="modal" data-bs-target="#imageModal" style="height: 500px;">
+      <div class="d-flex gap-2">
+        <img src="images/dresspdt.webp" class="img-thumbnail thumb-img" onclick="changeMainImage(this)">
+        <img src="images/dresspdt1.webp" class="img-thumbnail thumb-img" onclick="changeMainImage(this)">
+        <img src="images/dresspdt2.webp" class="img-thumbnail thumb-img" onclick="changeMainImage(this)">
+        <img src="images/dresspdt3.webp" class="img-thumbnail thumb-img" onclick="changeMainImage(this)">
+      </div>
+    </div>
+
+     <!-- Right: Product Details -->
+     <div class="col-lg-6">
+      <h2 class="fw-bold">Halter Wine</h2>
+      <p class="text-uppercase text-muted">Slitted Top</p>
+      <h4 class="fw-semibold mb-1">₹690.00</h4>
+      <p class="text-muted small">Taxes included. <a href="#">Shipping</a> calculated at checkout.</p>
+
+      <!-- Sizes -->
+      <div class="mb-3">
+        <label class="fw-semibold mb-1 d-block">Size</label>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-outline-dark btn-sm">S</button>
+          <button class="btn btn-outline-dark btn-sm">M</button>
+          <button class="btn btn-outline-dark btn-sm">L</button>
+        </div>
+      </div>
+
+      <!-- Quantity -->
+      <div class="mb-3">
+        <label class="fw-semibold mb-1">Quantity</label>
+        <div class="input-group" style="max-width: 140px;">
+          <button class="btn btn-outline-dark" type="button" onclick="updateQty(-1)">−</button>
+          <input id="qtyInput" type="text" class="form-control text-center" value="1" readonly>
+          <button class="btn btn-outline-dark" type="button" onclick="updateQty(1)">+</button>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="mb-3 d-grid gap-2">
+        <button class="btn btn-outline-dark">Add to Cart</button>
+        <button class="btn text-white" style="background-color: #ff009c;">Buy Now</button>
+      </div>
+
+      <!-- Product Details Table -->
+      <div class="table-responsive mt-4">
+        <table class="table table-bordered">
+          <tbody>
+            <tr><td><strong>Fabric</strong></td><td>Cotton</td></tr>
+            <tr><td><strong>Color</strong></td><td>Wine and Green</td></tr>
+            <tr><td><strong>Style</strong></td><td>Slitted Top</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for zoomed images -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-white border-0">
+      <div class="modal-body p-0 position-relative">
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+       <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img src="images/dresspdt.webp" class="d-block w-100 modal-img" alt="..."></div>
+            <div class="carousel-item"><img src="images/dresspdt1.webp" class="d-block w-100 modal-img" alt="..."></div>
+            <div class="carousel-item"><img src="images/dresspdt2.webp" class="d-block w-100 modal-img" alt="..."></div>
+            <div class="carousel-item"><img src="images/dresspdt3.webp" class="d-block w-100 modal-img" alt="..."></div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-left">
+    <div class="row">
+
+      <!-- Brand/Logo Section -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">Shop</h5><br>
+        <p>Discover stylish and affordable fashion for everyone. Fast shipping, easy returns, and secure payment.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white-50 text-decoration-none">Home</a></li><br>
+          <li><a href="#" class="text-white-50 text-decoration-none">Shop</a></li><br>
+          <li><a href="#" class="text-white-50 text-decoration-none">Offers</a></li><br>
+          <li><a href="#" class="text-white-50 text-decoration-none">About Us</a></li><br>
         </ul>
       </div>
-  </div>
-<br>
 
-<section class="py-5 product-detail-page">
-    <div class="container">
-      <div class="row g-4 flex-column-reverse flex-lg-row">
-        <!-- Left: Sticky image block -->
-        <div class="col-lg-6 mt-lg-0 d-none d-lg-block">
-          <div class="sticky-image-section" style="margin-top: 100px;">
-            <img id="mainImage" src="images/dresspdt.webp" class="img-fluid rounded shadow-sm w-100" alt="Product"  data-bs-toggle="modal"
-            data-bs-target="#imageModal">
-            <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap">
-              <img src="images/dresspdt.webp" class="img-thumbnail thumb-img" onclick="changeImage(this)">
-              <img src="images/dresspdt1.webp" class="img-thumbnail thumb-img" onclick="changeImage(this)">
-              <img src="images/dresspdt2.webp" class="img-thumbnail thumb-img" onclick="changeImage(this)">
-              <img src="images/dresspdt3.webp" class="img-thumbnail thumb-img" onclick="changeImage(this)">
-            </div>
-          </div>
+      <!-- Customer Service -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-3">Customer Service</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white-50 text-decoration-none">FAQs</a></li><br>
+          <li><a href="#" class="text-white-50 text-decoration-none">Shipping & Returns</a></li><br>
+          <li><a href="#" class="text-white-50 text-decoration-none">Terms & Conditions</a></li><br>
+          <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li><br>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 col-lg-4 col-xl-4 mb-4">
+        <h6 class="text-uppercase fw-bold mb-3">Contact</h6>
+        <p><i class="fas fa-map-marker-alt me-2"></i> 123 Fashion Street, City, IN</p>
+        <p><i class="fas fa-envelope me-2"></i> support@shopmate.com</p>
+        <p><i class="fas fa-phone me-2"></i> +91 98765 43210</p>
+        <div class="d-flex gap-3 mt-2">
+          <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
         </div>
-  
-        <!-- Right: Product content -->
-        <div class="col-lg-6 col-12" style="margin-top: 100px;">
-          <h2 class="fw-bold">Halter Wine</h2>
-          <p class="text-uppercase text-muted">Slitted Top</p>
-          <h4 class="fw-semibold mb-1">₹690.00</h4>
-          <p class="text-muted small">Taxes included. <a href="#">Shipping</a> calculated at checkout.</p>
-  
-          <!-- Sizes -->
-          <div class="mb-3">
-            <label class="fw-semibold mb-1 d-block">Size</label>
-            <div class="d-flex flex-wrap gap-2">
-              <button class="btn btn-outline-dark btn-sm active">XS</button>
-              <button class="btn btn-outline-dark btn-sm">S</button>
-              <button class="btn btn-outline-dark btn-sm">M</button>
-              <button class="btn btn-outline-dark btn-sm">L</button>
-              <button class="btn btn-outline-dark btn-sm">XL</button>
-            </div>
-          </div>
-  
-          <!-- Quantity -->
-          <div class="mb-3">
-            <label class="fw-semibold mb-1">Quantity</label>
-            <div class="input-group" style="max-width: 140px;">
-              <button class="btn btn-outline-dark" type="button" onclick="updateQty(-1)">−</button>
-              <input id="qtyInput" type="text" class="form-control text-center" value="1" readonly>
-              <button class="btn btn-outline-dark" type="button" onclick="updateQty(1)">+</button>
-            </div>
-          </div>
-  
-          <!-- Buttons -->
-          <div class="mb-3 d-grid gap-2">
-            <button class="btn btn-outline-dark">Add to Cart</button>
-            <button class="btn text-white" style="background-color: #ff009c;">Buy it now</button>
-          </div>
-  
-          <!-- Product Details -->
-          <div class="table-responsive mt-4">
-            <table class="table table-bordered">
-              <tbody>
-                <tr>
-                  <td><strong>Fabric</strong></td>
-                  <td>Cotton</td>
-                </tr>
-                <tr>
-                  <td><strong>Color</strong></td>
-                  <td>Wine and Green</td>
-                </tr>
-                <tr>
-                  <td><strong>Style</strong></td>
-                  <td>Slitted Top</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-  
-        <!-- Mobile View Images -->
-        <!-- Mobile View Images -->
-  <div class="col-12 d-lg-none order-1">
-    <img id="mainImageMobile" src="images/dresspdt.webp" class="img-fluid w-100 mb-3" alt="Product" data-bs-toggle="modal" data-bs-target="#imageModal">
-    
-    <div class="d-flex justify-content-center gap-2 flex-wrap">
-      <img src="images/dresspdt.webp" class="img-thumbnail thumb-img" onclick="setModalImage(this)">
-      <img src="images/dresspdt1.webp" class="img-thumbnail thumb-img" onclick="setModalImage(this)">
-      <img src="images/dresspdt2.webp" class="img-thumbnail thumb-img" onclick="setModalImage(this)">
-      <img src="images/dresspdt3.webp" class="img-thumbnail thumb-img" onclick="setModalImage(this)">
+      </div>
+    </div>
+
+    <hr class="border-light" />
+    <div class="text-center text-white-50">
+      © 2025 ShopMate. All Rights Reserved.
     </div>
   </div>
-  
-      </div>
-    </div>
-  </section>
-  
-  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content bg-white border-0">
-        <div class="modal-body p-0 position-relative">
-  
-          <!-- Close Button -->
-          <button
-            type="button"
-            class="btn-close position-absolute top-0 end-0 m-3"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-  
-          <!-- Carousel -->
-          <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="images/dresspdt.webp" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images/dresspdt1.webp" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images/dresspdt2.webp" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images/dresspdt3.webp" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </button>
-          </div>
-  
-        </div>
-      </div>
-    </div>
-  </div>
- 
-  
+</footer>
+ <!-- Bootstrap Bundle -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-  <footer class="footer bg-dark text-white pt-5 pb-4">
-    <div class="container text-md-left">
-      <div class="row">
+ <!-- Shrink on Scroll Script -->
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap Bundle -->
   
-        <!-- Brand/Logo Section -->
-        <div class="col-md-3 col-lg-3 col-xl-3 mb-4">
-          <h5 class="text-uppercase fw-bold mb-3">Shop</h5><br>
-          <p>Discover stylish and affordable fashion for everyone. Fast shipping, easy returns, and secure payment.</p>
-        </div>
-  
-        <!-- Quick Links -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white-50 text-decoration-none">Home</a></li><br>
-            <li><a href="#" class="text-white-50 text-decoration-none">Shop</a></li><br>
-            <li><a href="#" class="text-white-50 text-decoration-none">Offers</a></li><br>
-            <li><a href="#" class="text-white-50 text-decoration-none">About Us</a></li><br>
-          </ul>
-        </div>
-  
-        <!-- Customer Service -->
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-3">Customer Service</h6>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white-50 text-decoration-none">FAQs</a></li><br>
-            <li><a href="#" class="text-white-50 text-decoration-none">Shipping & Returns</a></li><br>
-            <li><a href="#" class="text-white-50 text-decoration-none">Terms & Conditions</a></li><br>
-            <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li><br>
-          </ul>
-        </div>
-  
-        <!-- Contact Info -->
-        <div class="col-md-4 col-lg-4 col-xl-4 mb-4">
-          <h6 class="text-uppercase fw-bold mb-3">Contact</h6>
-          <p><i class="fas fa-map-marker-alt me-2"></i> 123 Fashion Street, City, IN</p>
-          <p><i class="fas fa-envelope me-2"></i> support@shopmate.com</p>
-          <p><i class="fas fa-phone me-2"></i> +91 98765 43210</p>
-          <div class="d-flex gap-3 mt-2">
-            <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-      </div>
-  
-      <hr class="border-light" />
-      <div class="text-center text-white-50">
-        © 2025 ShopMate. All Rights Reserved.
-      </div>
-    </div>
-  </footer>
-   <!-- Bootstrap Bundle -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
- 
-   <!-- Shrink on Scroll Script -->
-   <script>
-    const promoBanner = document.getElementById('promoBanner'); // make sure ID matches your HTML
-   const mainNavbar = document.getElementById('mainNavbar');
- 
-   window.addEventListener('scroll', () => {
-     if (window.scrollY > 20) {
-       // Hide banner and move navbar to top
-       if (promoBanner) promoBanner.classList.add('d-none');
-       if (mainNavbar) {
-         mainNavbar.classList.remove('mt-with-banner');
-         mainNavbar.classList.add('mt-no-banner');
-         mainNavbar.classList.add('shrink'); // optional: shrink navbar
-       }
-     } else {
-       // Show banner and push navbar down
-       if (promoBanner) promoBanner.classList.remove('d-none');
-       if (mainNavbar) {
-         mainNavbar.classList.remove('mt-no-banner');
-         mainNavbar.classList.add('mt-with-banner');
-         mainNavbar.classList.remove('shrink');
-       }
-     }
-   });
- 
- 
- 
-   const navbar = document.getElementById('mainNavbar');
- 
-   window.addEventListener('scroll', () => {
-     if (window.scrollY > 10) {
-       navbar.classList.add('scrolled');
-     } else {
-       navbar.classList.remove('scrolled');
-     }
-   });
- 
- 
- 
- 
- 
- const searchToggle = document.getElementById('searchToggle');
-   const searchBox = document.getElementById('searchBox');
- 
-   searchToggle.addEventListener('click', function () {
-     searchBox.classList.toggle('d-none');
-   });
- 
-    
-  
- 
- 
- 
+  <!-- Shrink on Scroll Script -->
+  <script>
+   const promoBanner = document.getElementById('promoBanner'); // make sure ID matches your HTML
+  const mainNavbar = document.getElementById('mainNavbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      // Hide banner and move navbar to top
+      if (promoBanner) promoBanner.classList.add('d-none');
+      if (mainNavbar) {
+        mainNavbar.classList.remove('mt-with-banner');
+        mainNavbar.classList.add('mt-no-banner');
+        mainNavbar.classList.add('shrink'); // optional: shrink navbar
+      }
+    } else {
+      // Show banner and push navbar down
+      if (promoBanner) promoBanner.classList.remove('d-none');
+      if (mainNavbar) {
+        mainNavbar.classList.remove('mt-no-banner');
+        mainNavbar.classList.add('mt-with-banner');
+        mainNavbar.classList.remove('shrink');
+      }
+    }
+  });
+
+
+
+  const navbar = document.getElementById('mainNavbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+
+
+
+
+  const searchToggle = document.getElementById('searchToggle');
+ const searchBox = document.getElementById('searchBox');
+
+ searchToggle.addEventListener('click', function () {
+   searchBox.classList.toggle('d-none');
+ });
+
+
+
+// Toggle search box visibility
+document.getElementById("searchToggleMobile").addEventListener("click", function () {
+ document.getElementById("searchBox").classList.toggle("d-none");
+});
+
    
  
-   
-   
-   // Sync on slide change
-   carousel.addEventListener('slide.bs.carousel', function (e) {
-     updateIndicators(e.to);
-   });
- 
-   // Auto advance every 4s (must match animation duration)
-   setInterval(() => {
-     const nextIndex = (currentIndex + 1) % indicators.length;
-     bootstrap.Carousel.getInstance(carousel).to(nextIndex);
-     currentIndex = nextIndex;
-   }, 4000);
- 
- 
- 
-   $(document).on('click', '.wishlist-btn i', function () {
-     $(this).toggleClass('far fas'); // far = outlined, fas = solid
-   });
- 
- 
-   const images1 = ["images/product1a.jpg", "images/product1b.jpg", "images/product1c.jpg"];
-   let index1 = 0;
- 
-   function nextImage(id) {
-     if (id === 1) {
-       index1 = (index1 + 1) % images1.length;
-       document.getElementById("image-display-1").src = images1[index1];
-     }
-   }
- 
-   function prevImage(id) {
-     if (id === 1) {
-       index1 = (index1 - 1 + images1.length) % images1.length;
-       document.getElementById("image-display-1").src = images1[index1];
-     }
-   }
+
 
 
   
-  function changeImage(el) {
-  const main = document.getElementById('mainImage');
-  if (main && el) {
-    main.src = el.src;
-  }
-}
-function changeImage(el) {
-    document.getElementById("mainImage").src = el.src;
-  }
 
-  function updateQty(change) {
-    const qtyInput = document.getElementById("qtyInput");
-    let qty = parseInt(qtyInput.value);
-    if (!isNaN(qty)) {
-      qty = qty + change;
-      qtyInput.value = qty < 1 ? 1 : qty;
+  
+  
+  // Sync on slide change
+  carousel.addEventListener('slide.bs.carousel', function (e) {
+    updateIndicators(e.to);
+  });
+
+  // Auto advance every 4s (must match animation duration)
+  setInterval(() => {
+    const nextIndex = (currentIndex + 1) % indicators.length;
+    bootstrap.Carousel.getInstance(carousel).to(nextIndex);
+    currentIndex = nextIndex;
+  }, 4000);
+
+
+
+  $(document).on('click', '.wishlist-btn i', function () {
+    $(this).toggleClass('far fas'); // far = outlined, fas = solid
+  });
+
+
+  const images1 = ["images/product1a.jpg", "images/product1b.jpg", "images/product1c.jpg"];
+  let index1 = 0;
+
+  function nextImage(id) {
+    if (id === 1) {
+      index1 = (index1 + 1) % images1.length;
+      document.getElementById("image-display-1").src = images1[index1];
     }
   }
 
-
-  function setModalImage(el) {
-    document.getElementById('modalImage').src = el.src;
-    // Also update main image
-    document.getElementById('mainImageMobile').src = el.src;
+  function prevImage(id) {
+    if (id === 1) {
+      index1 = (index1 - 1 + images1.length) % images1.length;
+      document.getElementById("image-display-1").src = images1[index1];
+    }
   }
-   </script>
- </body>
- </html>
+  
+
+
+
+
+  function changeMainImage(el) {
+    const main = document.getElementById('mainImage');
+    const items = document.querySelectorAll('#imageCarousel .carousel-item');
+    main.src = el.src;
+
+    items.forEach(item => {
+      item.classList.remove('active');
+      if (item.querySelector('img').src === el.src) {
+        item.classList.add('active');
+      }
+    });
+  }
+
+  function updateQty(change) {
+    const input = document.getElementById("qtyInput");
+    let qty = parseInt(input.value);
+    qty = Math.max(1, qty + change);
+    input.value = qty;
+  }
+  function updateQty(change) {
+  const input = document.getElementById("qtyInput");
+  let value = parseInt(input.value);
+  value = isNaN(value) ? 1 : value + change;
+  input.value = value < 1 ? 1 : value;
+}
+
+</script>
+</body>
+</html>

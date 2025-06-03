@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 </head>
 <style>
@@ -103,8 +103,9 @@
   
 
   <!-- Navbar -->
-<nav id="mainNavbar" class="navbar fixed-top w-100 transition-navbar" style="margin-top: 20px;">
-    <div class="container-fluid px-3 position-relative">
+  <nav id="mainNavbar" class="navbar fixed-top w-100 mt-with-banner transition-navbar">
+
+    <div class="container px-3 position-relative">
         <div class="position-absolute top-50 start-0 translate-middle-y ms-2">
           <button class="btn border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
             <i class="fas fa-bars fa-lg nav-icon" style="color: #000;"></i>
@@ -123,19 +124,21 @@
         
       </div>
     <!-- Desktop Icons -->
-    <div class="position-absolute top-50 end-0 translate-middle-y d-none d-sm-flex align-items-center gap-4 pe-4">
-        <a href="javascript:void(0);" id="searchToggle" class="nav-icon"><i class="fas fa-search" style="color: black;"></i></a>
-        <a href="#" class="nav-icon"><i class="fas fa-user" style="color: black;"></i></a>
-        <a href="#" class="nav-icon"><i class="fas fa-shopping-bag" style="color: black;"></i></a>
-      </div>
+<div class="position-absolute top-50 end-0 translate-middle-y d-none d-sm-flex align-items-center gap-4 pe-4 ">
+  <a href="javascript:void(0);" id="searchToggle" class="nav-icon"><i class="fas fa-search" style="color: #000;"></i></a>
+  <a href="#" class="nav-icon"><i class="fas fa-user" style="color: #000;"></i></a>
+  <a href="#" class="nav-icon"><i class="fas fa-shopping-bag" style="color: #000;"></i></a>
+</div>
+
+      <!-- Mobile Icons -->
 
 
 <!-- Mobile Only Icons -->
 <div class="position-absolute top-50 end-0 translate-middle-y d-flex d-sm-none align-items-center gap-3 pe-3">
-    <a href="javascript:void(0);" id="searchToggleMobile" class="nav-icon"><i class="fas fa-search fs-6" style="color: #000;"></i></a>
-    <a href="#" class="nav-icon"><i class="fas fa-user fs-6" style="color: #000;"></i></a>
-    <a href="#" class="nav-icon"><i class="fas fa-shopping-bag fs-6" style="color: #000;"></i></a>
-  </div>
+  <a href="javascript:void(0);" id="searchToggleMobile" class="nav-icon"><i class="fas fa-search" style="color: #000;"></i></a>
+  <a href="#" class="nav-icon"><i class="fas fa-user" style="color: #000;"></i></a>
+  <a href="#" class="nav-icon"><i class="fas fa-shopping-bag" style="color: #000;"></i></a>
+</div>
 
       
 <!-- Search Toggle Box (Initially Hidden) -->
@@ -315,13 +318,19 @@
  
  
  
- const searchToggle = document.getElementById('searchToggle');
-   const searchBox = document.getElementById('searchBox');
- 
-   searchToggle.addEventListener('click', function () {
-     searchBox.classList.toggle('d-none');
-   });
- 
+   const searchToggle = document.getElementById('searchToggle');
+  const searchBox = document.getElementById('searchBox');
+
+  searchToggle.addEventListener('click', function () {
+    searchBox.classList.toggle('d-none');
+  });
+
+
+
+// Toggle search box visibility
+document.getElementById("searchToggleMobile").addEventListener("click", function () {
+  document.getElementById("searchBox").classList.toggle("d-none");
+});
     
   
  

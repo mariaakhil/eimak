@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 </head>
 <style>
@@ -69,7 +69,11 @@
     color: #fff;
     position: relative;
   }
-  
+  @media (max-width: 768px) {
+  .navbar-brand img {
+    height: 18px !important; /* or 15px depending on your design */
+  }
+}
 </style>
 <body>
 
@@ -555,12 +559,19 @@
  
  
  
- const searchToggle = document.getElementById('searchToggle');
-   const searchBox = document.getElementById('searchBox');
- 
-   searchToggle.addEventListener('click', function () {
-     searchBox.classList.toggle('d-none');
-   });
+   const searchToggle = document.getElementById('searchToggle');
+  const searchBox = document.getElementById('searchBox');
+
+  searchToggle.addEventListener('click', function () {
+    searchBox.classList.toggle('d-none');
+  });
+
+
+
+// Toggle search box visibility
+document.getElementById("searchToggleMobile").addEventListener("click", function () {
+  document.getElementById("searchBox").classList.toggle("d-none");
+});
  
     
   
@@ -609,3 +620,8 @@
    </script>
  </body>
  </html>
+
+
+
+
+ 

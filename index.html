@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 </head>
 <style>
@@ -337,7 +337,18 @@
 }
 
  
+@media (max-width: 768px) {
+  .nav-icon {
+    color: #000;
+    font-size: 14px; /* or 12px */
 
+  }
+}
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 18px !important; /* or 15px depending on your design */
+  }
+}
 </style>
 <body>
 
@@ -350,7 +361,7 @@
   <!-- Navbar -->
   <nav id="mainNavbar" class="navbar fixed-top w-100 mt-with-banner transition-navbar">
 
-    <div class="container-fluid px-3 position-relative">
+    <div class="container px-3 position-relative">
         <div class="position-absolute top-50 start-0 translate-middle-y ms-2">
           <button class="btn border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
             <i class="fas fa-bars fa-lg nav-icon"></i>
@@ -537,7 +548,7 @@
       <h2 class="text-center mb-4">Trending Deals</h2>
       <div class="row g-4">
      <!-- Card 1 -->
-        <div class="col-md-3">
+        <div class="col-6 col-md-3 mb-4">
           <div class="card product-card position-relative overflow-hidden border-0">
       
            <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
@@ -572,7 +583,7 @@
         </div>
   
         <!-- Card 2 -->
-        <div class="col-md-3">
+        <div class="col-6 col-md-3 mb-4">
           <div class="card product-card position-relative overflow-hidden border-0">
             <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
             
@@ -605,7 +616,7 @@
         </div>
   
         <!-- Card 3 -->
-        <div class="col-md-3">
+        <div class="col-6 col-md-3 mb-4">
           <div class="card product-card position-relative overflow-hidden border-0">
             <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
            
@@ -638,7 +649,7 @@
         </div>
   
         <!-- Card 4 -->
-        <div class="col-md-3">
+        <div class="col-6 col-md-3 mb-4">
           <div class="card product-card position-relative overflow-hidden border-0">
             <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
            
@@ -769,7 +780,7 @@
     <div class="row g-4">
 
       <!-- Card 1 -->
-      <div class="col-md-3">
+      <div class="col-6 col-md-3 mb-4">
         <div class="card product-card position-relative overflow-hidden border-0">
           <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
          
@@ -802,7 +813,7 @@
         </div>
       </div>
   <!-- Card 2 -->
-      <div class="col-md-3">
+      <div class="col-6 col-md-3 mb-4">
         <div class="card product-card position-relative overflow-hidden border-0">
           <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
 
@@ -833,7 +844,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="col-md-3">
+      <div class="col-6 col-md-3 mb-4">
         <div class="card product-card position-relative overflow-hidden border-0">
           <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
 
@@ -864,7 +875,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="col-md-3">
+      <div class="col-6 col-md-3 mb-4">
         <div class="card product-card position-relative overflow-hidden border-0">
           <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
 
@@ -993,7 +1004,7 @@
   <div class="container">
     <div class="row g-4">
    <!-- Card 1 -->
-      <div class="col-md-3">
+      <div class="col-6 col-md-3 mb-4">
         <div class="card product-card position-relative overflow-hidden border-0">
     
          <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
@@ -1028,7 +1039,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="col-md-3">
+      <div class="col-6 col-md-3 mb-4">
         <div class="card product-card position-relative overflow-hidden border-0">
           <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
           
@@ -1061,7 +1072,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="col-md-3">
+      <div class="col-6 col-md-3 mb-4">
         <div class="card product-card position-relative overflow-hidden border-0">
           <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
          
@@ -1094,7 +1105,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="col-md-3">
+      <div class="col-6 col-md-3 mb-4">
         <div class="card product-card position-relative overflow-hidden border-0">
           <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
          
@@ -1212,7 +1223,7 @@
   <div class="container">
     <div class="row g-4">
    <!-- Card 1 -->
-      <div class="col-md-3">
+      <div class="col-6 col-md-3 mb-4">
         <div class="card product-card position-relative overflow-hidden border-0">
     
          <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
@@ -1247,7 +1258,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="col-md-3">
+      <div class="col-6 col-md-3 mb-4">
         <div class="card product-card position-relative overflow-hidden border-0">
           <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
           
@@ -1280,7 +1291,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="col-md-3">
+      <div class="col-6 col-md-3 mb-4">
         <div class="card product-card position-relative overflow-hidden border-0">
           <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
          
@@ -1313,7 +1324,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="col-md-3">
+      <div class="col-6 col-md-3 mb-4">
         <div class="card product-card position-relative overflow-hidden border-0">
           <button class="wishlist-btn position-absolute top-0 end-0 m-2"><i class="far fa-heart"></i></button>
          

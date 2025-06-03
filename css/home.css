@@ -264,7 +264,7 @@ body {
     background-color: #e6008a; /* slightly darker on hover */
   }
   .carousel-img {
-    height: 50vh; /* or set a specific px value like 500px */
+     /* or set a specific px value like 500px */
     object-fit: cover;
     object-position: center;
   }
@@ -831,4 +831,6 @@ body {
       display: inline-block;
     }
   }
+  
+
   
